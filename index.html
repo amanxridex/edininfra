@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Realist – Real Estate Listing Agency</title>
-  <meta name="description" content="Premium real estate agency for property listing, buying, selling, and renting homes." />
+  <title>ED InfraTech – RERA Approved Real Estate Delhi NCR</title>
+  <meta name="description" content="ED InfraTech – RERA approved and loan approved projects in Delhi NCR, Noida, Vrindavan, Haridwar, Dehradun, Jaipur, Goa, Dubai and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Fragment+Mono&display=swap" rel="stylesheet" />
@@ -12,18 +12,19 @@
 </head>
 <body>
 
-  <!-- ======= NAVBAR ======= -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a class="logo" href="#">
-        <span class="logo-dot"></span>
-        Realist
+        <img src="assets/edinlogo.png" alt="ED InfraTech" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="logo-fallback"><span class="logo-dot"></span>ED InfraTech</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#listings">Listings</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#locations">Locations</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#rera">RERA</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
@@ -35,267 +36,399 @@
     </div>
   </nav>
 
-  <!-- ======= HERO ======= -->
+  <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-inner">
-      <div class="hero-tag">
-        <span class="tag-dot"></span> Premium Properties
+      <div class="hero-badges-row">
+        <span class="hero-badge rera">✅ RERA Approved</span>
+        <span class="hero-badge loan">🏦 Loan Approved</span>
+        <span class="hero-badge legal">🖋️ Legal Assistance</span>
       </div>
       <h1 class="hero-title">
-        Find your<br />
-        <em>dream home</em><br />
-        today.
+        Building Your<br />
+        <em>Future, Brick</em><br />
+        by Brick.
       </h1>
       <p class="hero-sub">
-        We connect buyers, sellers & renters with the finest properties — luxury villas, modern apartments, family homes and more.
+        ED InfraTech brings you RERA-approved, loan-approved real estate projects across Delhi NCR, Noida, Vrindavan, Haridwar, Dehradun, Dubai and beyond — residential, commercial &amp; agricultural land.
       </p>
       <div class="hero-actions">
-        <a href="#listings" class="btn btn-dark">Browse Listings</a>
-        <a href="#contact" class="btn btn-outline">Book a Tour</a>
+        <a href="#projects" class="btn btn-dark">Our Projects</a>
+        <a href="#contact" class="btn btn-outline">Book a Site Visit</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num" data-target="1200">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Properties Listed</span>
+          <span class="stat-num" data-target="13">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Locations</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num" data-target="840">0</span><span class="stat-plus">+</span>
+          <span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span>
           <span class="stat-label">Happy Clients</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num" data-target="15">0</span><span class="stat-plus"></span>
-          <span class="stat-label">Years Experience</span>
+          <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">RERA Compliant</span>
         </div>
       </div>
     </div>
     <div class="hero-img-wrap">
       <div class="hero-img-card">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Luxury Home" loading="eager" />
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="ED InfraTech Property" loading="eager" />
         <div class="hero-img-badge">
-          <span class="badge-tag">For Sale</span>
-          <span class="badge-price">$2,400,000</span>
+          <span class="badge-tag">✅ RERA Approved</span>
+          <span class="badge-price">Delhi NCR</span>
         </div>
       </div>
       <div class="hero-float-card">
-        <div class="float-avatar">
-          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face" alt="Agent" />
-        </div>
+        <div class="float-icon">🏗️</div>
         <div>
-          <div class="float-name">Sarah Johnson</div>
-          <div class="float-role">Senior Agent</div>
+          <div class="float-name">Verified Projects</div>
+          <div class="float-role">RERA &amp; Loan Approved</div>
         </div>
-        <div class="float-rating">★ 4.9</div>
+        <div class="float-rating">✅</div>
       </div>
     </div>
   </section>
 
-  <!-- ======= MARQUEE ======= -->
+  <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span>Luxury Villas</span><span class="dot">·</span>
-      <span>Modern Apartments</span><span class="dot">·</span>
-      <span>Family Homes</span><span class="dot">·</span>
-      <span>Commercial Space</span><span class="dot">·</span>
-      <span>Beachfront Properties</span><span class="dot">·</span>
-      <span>Penthouses</span><span class="dot">·</span>
-      <span>Luxury Villas</span><span class="dot">·</span>
-      <span>Modern Apartments</span><span class="dot">·</span>
-      <span>Family Homes</span><span class="dot">·</span>
-      <span>Commercial Space</span><span class="dot">·</span>
-      <span>Beachfront Properties</span><span class="dot">·</span>
-      <span>Penthouses</span><span class="dot">·</span>
+      <span>🏬 Delhi</span><span class="dot">·</span>
+      <span>🏬 Noida</span><span class="dot">·</span>
+      <span>🏬 Jattari</span><span class="dot">·</span>
+      <span>🏬 Dankaur</span><span class="dot">·</span>
+      <span>🏬 Vrindavan</span><span class="dot">·</span>
+      <span>🏬 Haridwar</span><span class="dot">·</span>
+      <span>🏬 Dehradun</span><span class="dot">·</span>
+      <span>🏬 Khatushyam</span><span class="dot">·</span>
+      <span>🏬 Jaipur</span><span class="dot">·</span>
+      <span>🏬 Goa</span><span class="dot">·</span>
+      <span>🏬 Ghaziabad</span><span class="dot">·</span>
+      <span>🏬 Dholera</span><span class="dot">·</span>
+      <span>🌍 Dubai</span><span class="dot">·</span>
+      <span>🏬 Delhi</span><span class="dot">·</span>
+      <span>🏬 Noida</span><span class="dot">·</span>
+      <span>🏬 Jattari</span><span class="dot">·</span>
+      <span>🏬 Vrindavan</span><span class="dot">·</span>
+      <span>🏬 Haridwar</span><span class="dot">·</span>
+      <span>🌍 Dubai</span><span class="dot">·</span>
     </div>
   </div>
 
-  <!-- ======= LISTINGS ======= -->
-  <section class="listings section" id="listings">
+  <!-- PROJECTS -->
+  <section class="listings section" id="projects">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag"><span class="tag-dot"></span>Featured Listings</div>
-        <h2 class="section-title">Properties worth<br /><em>exploring</em></h2>
-        <a href="#" class="btn btn-outline btn-sm">View All</a>
+        <div>
+          <div class="section-tag"><span class="tag-dot"></span>Our Projects</div>
+          <h2 class="section-title">RERA &amp; Loan Approved<br /><em>Properties</em></h2>
+        </div>
+        <a href="#contact" class="btn btn-outline btn-sm">Enquire Now</a>
       </div>
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="sale">For Sale</button>
-        <button class="filter-btn" data-filter="rent">For Rent</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="land">Agricultural Land</button>
         <button class="filter-btn" data-filter="luxury">Luxury</button>
       </div>
       <div class="listings-grid" id="listingsGrid">
-
-        <div class="prop-card" data-type="sale luxury">
+        <div class="prop-card" data-type="residential">
           <div class="prop-img-wrap">
-            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80" alt="Villa" loading="lazy" />
-            <span class="prop-badge sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80" alt="Residential Villa" loading="lazy" />
+            <span class="prop-badge sale">✅ RERA Approved</span>
             <button class="prop-fav" aria-label="Save">♡</button>
           </div>
           <div class="prop-body">
-            <div class="prop-price">$3,200,000</div>
-            <div class="prop-name">Skyline Luxury Villa</div>
-            <div class="prop-loc">📍 Beverly Hills, CA</div>
-            <div class="prop-meta">
-              <span>5 Bed</span><span>4 Bath</span><span>4,200 sqft</span>
-            </div>
+            <div class="prop-price">Residential Villa</div>
+            <div class="prop-name">Gated Community — Noida</div>
+            <div class="prop-loc">📍 Noida, Delhi NCR</div>
+            <div class="prop-meta"><span>✅ RERA</span><span>🏦 Loan OK</span><span>🖋️ Legal Aid</span></div>
           </div>
         </div>
-
-        <div class="prop-card featured" data-type="sale">
+        <div class="prop-card featured" data-type="commercial">
           <div class="prop-img-wrap">
-            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="Modern Home" loading="lazy" />
-            <span class="prop-badge sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Commercial" loading="lazy" />
+            <span class="prop-badge sale">✅ RERA Approved</span>
             <button class="prop-fav" aria-label="Save">♡</button>
           </div>
           <div class="prop-body">
-            <div class="prop-price">$1,850,000</div>
-            <div class="prop-name">Modern Glass House</div>
-            <div class="prop-loc">📍 Malibu, CA</div>
-            <div class="prop-meta">
-              <span>4 Bed</span><span>3 Bath</span><span>3,100 sqft</span>
-            </div>
+            <div class="prop-price">Commercial Space</div>
+            <div class="prop-name">Grade-A Office — Delhi</div>
+            <div class="prop-loc">📍 Delhi, NCR</div>
+            <div class="prop-meta"><span>✅ RERA</span><span>🏦 Loan OK</span><span>🖋️ Legal Aid</span></div>
           </div>
         </div>
-
-        <div class="prop-card" data-type="rent">
+        <div class="prop-card" data-type="land">
           <div class="prop-img-wrap">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Apartment" loading="lazy" />
-            <span class="prop-badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Agricultural Land" loading="lazy" />
+            <span class="prop-badge land-badge">🌾 Agri Land</span>
             <button class="prop-fav" aria-label="Save">♡</button>
           </div>
           <div class="prop-body">
-            <div class="prop-price">$6,500<span>/mo</span></div>
-            <div class="prop-name">Downtown Penthouse</div>
-            <div class="prop-loc">📍 Manhattan, NY</div>
-            <div class="prop-meta">
-              <span>3 Bed</span><span>2 Bath</span><span>2,400 sqft</span>
-            </div>
+            <div class="prop-price">Agricultural Land</div>
+            <div class="prop-name">Farmland Plots — Jattari</div>
+            <div class="prop-loc">📍 Jattari, Delhi NCR</div>
+            <div class="prop-meta"><span>✅ Verified</span><span>🖋️ Legal Aid</span><span>📜 Clear Title</span></div>
           </div>
         </div>
-
-        <div class="prop-card" data-type="sale luxury">
+        <div class="prop-card" data-type="residential luxury">
           <div class="prop-img-wrap">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Estate" loading="lazy" />
-            <span class="prop-badge sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Luxury" loading="lazy" />
+            <span class="prop-badge sale">✅ RERA Approved</span>
             <button class="prop-fav" aria-label="Save">♡</button>
           </div>
           <div class="prop-body">
-            <div class="prop-price">$5,700,000</div>
-            <div class="prop-name">Oceanfront Estate</div>
-            <div class="prop-loc">📍 Miami Beach, FL</div>
-            <div class="prop-meta">
-              <span>6 Bed</span><span>5 Bath</span><span>6,800 sqft</span>
-            </div>
+            <div class="prop-price">Luxury Residences</div>
+            <div class="prop-name">Premium Villas — Vrindavan</div>
+            <div class="prop-loc">📍 Vrindavan, UP</div>
+            <div class="prop-meta"><span>✅ RERA</span><span>🏦 Loan OK</span><span>🖋️ Legal Aid</span></div>
           </div>
         </div>
-
-        <div class="prop-card" data-type="rent">
+        <div class="prop-card" data-type="residential">
           <div class="prop-img-wrap">
-            <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=600&q=80" alt="Condo" loading="lazy" />
-            <span class="prop-badge rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="Haridwar" loading="lazy" />
+            <span class="prop-badge sale">✅ RERA Approved</span>
             <button class="prop-fav" aria-label="Save">♡</button>
           </div>
           <div class="prop-body">
-            <div class="prop-price">$3,200<span>/mo</span></div>
-            <div class="prop-name">Urban Studio Condo</div>
-            <div class="prop-loc">📍 Chicago, IL</div>
-            <div class="prop-meta">
-              <span>2 Bed</span><span>1 Bath</span><span>1,100 sqft</span>
-            </div>
+            <div class="prop-price">Residential Plots</div>
+            <div class="prop-name">Ganga View Township — Haridwar</div>
+            <div class="prop-loc">📍 Haridwar, Uttarakhand</div>
+            <div class="prop-meta"><span>✅ RERA</span><span>🏦 Loan OK</span><span>🖋️ Legal Aid</span></div>
           </div>
         </div>
-
-        <div class="prop-card" data-type="sale luxury">
+        <div class="prop-card" data-type="luxury">
           <div class="prop-img-wrap">
-            <img src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=600&q=80" alt="House" loading="lazy" />
-            <span class="prop-badge sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="Dubai" loading="lazy" />
+            <span class="prop-badge rent">🌍 International</span>
             <button class="prop-fav" aria-label="Save">♡</button>
           </div>
           <div class="prop-body">
-            <div class="prop-price">$2,100,000</div>
-            <div class="prop-name">Hillside Retreat</div>
-            <div class="prop-loc">📍 Bel Air, CA</div>
-            <div class="prop-meta">
-              <span>5 Bed</span><span>4 Bath</span><span>3,900 sqft</span>
-            </div>
+            <div class="prop-price">International</div>
+            <div class="prop-name">Premium Apartments — Dubai</div>
+            <div class="prop-loc">📍 Dubai, UAE</div>
+            <div class="prop-meta"><span>💸 Home Loan</span><span>🖋️ Legal Aid</span><span>🏦 Finance</span></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ======= SERVICES ======= -->
+  <!-- LOCATIONS -->
+  <section class="locations section" id="locations">
+    <div class="container">
+      <div class="section-tag"><span class="tag-dot"></span>Our Presence</div>
+      <h2 class="section-title">Projects Available Across<br /><em>India &amp; Beyond</em></h2>
+      <div class="locations-grid">
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Delhi</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Noida</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Jattari</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Dankaur</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Vrindavan</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Haridwar</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Dehradun</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Khatushyam</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Jaipur</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Goa</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Ghaziabad</span></div>
+        <div class="loc-card"><span class="loc-icon">➡️</span><span>Dholera</span></div>
+        <div class="loc-card highlight-loc"><span class="loc-icon">🌍</span><span>Dubai</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section class="services section" id="services">
     <div class="container">
-      <div class="section-tag"><span class="tag-dot"></span>Our Services</div>
-      <h2 class="section-title">Everything you need,<br /><em>under one roof</em></h2>
+      <div class="section-tag"><span class="tag-dot-light"></span>What We Do</div>
+      <h2 class="section-title light-title">Our Services —<br /><em>Everything Under One Roof</em></h2>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">🏠</div>
-          <h3>Buy a Property</h3>
-          <p>Find your perfect home from our curated selection of listings. Expert guidance every step of the way.</p>
-          <a href="#" class="service-link">Learn more →</a>
+          <h3>Residential</h3>
+          <p>Matching families with homes that fit their lifestyle and long-term needs — apartments to luxury villas.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
         </div>
         <div class="service-card highlight">
-          <div class="service-icon">💰</div>
-          <h3>Sell Your Home</h3>
-          <p>Get the best market value with our professional valuation, staging, photography & marketing campaigns.</p>
-          <a href="#" class="service-link">Learn more →</a>
+          <div class="service-icon">🏬</div>
+          <h3>Commercial</h3>
+          <p>Strategic site selection and leasing to help businesses scale and thrive in Grade-A commercial spaces.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>Investment</h3>
+          <p>Identifying high-yield opportunities for portfolio diversification and growth in emerging Tier-2 cities.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
         </div>
         <div class="service-card">
           <div class="service-icon">🔑</div>
-          <h3>Rent & Lease</h3>
-          <p>Discover rental properties that match your lifestyle — vetted listings, flexible terms, fast move-in.</p>
-          <a href="#" class="service-link">Learn more →</a>
+          <h3>Property Management</h3>
+          <p>Stress-free oversight protecting your assets — maintenance, tenants &amp; finances handled professionally.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3>Property Management</h3>
-          <p>We handle maintenance, tenants & finances for landlords — so you can enjoy passive income stress-free.</p>
-          <a href="#" class="service-link">Learn more →</a>
+          <div class="service-icon">🌾</div>
+          <h3>Agricultural Lands</h3>
+          <p>Verified agricultural land parcels in Delhi-NCR with clear titles, legal assistance &amp; investment potential.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💸</div>
+          <h3>Home Loan &amp; Finance</h3>
+          <p>Best home loan options with full paperwork support — from sanction to disbursal, we handle it all.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🖋️</div>
+          <h3>Legal Assistance</h3>
+          <p>Expert legal support for documentation, title verification, registry, and dispute resolution.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3>International Projects</h3>
+          <p>Overseas investment in Dubai and global markets with full legal and financial guidance for NRIs.</p>
+          <a href="#contact" class="service-link">Enquire →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= ABOUT / UNIQUENESS ======= -->
+  <!-- RERA SECTION -->
+  <section class="rera-section section" id="rera">
+    <div class="container">
+      <div class="section-tag"><span class="tag-dot"></span>RERA Explained</div>
+      <h2 class="section-title">What is <em>RERA?</em></h2>
+      <div class="rera-intro">
+        <p>RERA stands for the <strong>Real Estate Regulatory Authority</strong>, established under the Real Estate (Regulation and Development) Act, 2016. It is a government body designed to protect homebuyers and boost investments. As of 2026, RERA has evolved into <strong>"RERA 2.0"</strong> — featuring AI-powered digital monitoring and even stricter accountability for developers.</p>
+      </div>
+      <div class="rera-grid">
+        <div class="rera-card">
+          <div class="rera-icon">📋</div>
+          <h4>Mandatory Registration</h4>
+          <p>No developer can advertise or sell a property without first registering with their state's RERA authority. Verify any project's RERA Number on official state portals.</p>
+        </div>
+        <div class="rera-card">
+          <div class="rera-icon">🏦</div>
+          <h4>70% Escrow Rule</h4>
+          <p>Builders must deposit 70% of funds collected into a dedicated escrow account for that specific construction — fully protecting your investment from day one.</p>
+        </div>
+        <div class="rera-card">
+          <div class="rera-icon">📐</div>
+          <h4>Carpet Area Standardisation</h4>
+          <p>Builders must sell based on Carpet Area (actual usable floor space) — not the confusing "Super Built-up Area." Pay only for what you get.</p>
+        </div>
+        <div class="rera-card">
+          <div class="rera-icon">🛠️</div>
+          <h4>5-Year Defect Liability</h4>
+          <p>If any structural defects arise within 5 years of possession, the builder is legally obligated to fix them for free. Zero cost to the buyer.</p>
+        </div>
+        <div class="rera-card">
+          <div class="rera-icon">💰</div>
+          <h4>Delay Compensation</h4>
+          <p>If a project is delayed, the builder must pay monthly interest (SBI rate + 2%) for every month of the delay. Your time is legally valued.</p>
+        </div>
+        <div class="rera-card highlight-rera">
+          <div class="rera-icon">🤖</div>
+          <h4>RERA 2.0 — New in 2026</h4>
+          <p>AI-driven progress tracking, 60-day digital dispute resolution, and mandatory third-party escrow audits make 2026 the most transparent year in Indian real estate history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL ESTATE OVERVIEW -->
+  <section class="realestate-overview section">
+    <div class="container">
+      <div class="section-tag"><span class="tag-dot"></span>About Real Estate</div>
+      <h2 class="section-title">The 2026 Real Estate<br /><em>Landscape</em></h2>
+      <p class="overview-intro">The market in 2026 is defined by a <strong>"flight to quality"</strong> — stability and sustainability valued above speculative growth. Here's what's driving the sector globally and in India:</p>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-num">01</div>
+          <h4>Residential</h4>
+          <p>A massive surge in gated communities and "lifestyle-first" developments. Single-family homes, apartments &amp; condominiums lead the segment.</p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-num">02</div>
+          <h4>Commercial</h4>
+          <p>Grade-A office spaces with green certifications are seeing the highest demand. ESG-compliant buildings command a 10–12% value premium.</p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-num">03</div>
+          <h4>Industrial</h4>
+          <p>Warehouses, manufacturing plants and distribution centers are booming due to e-commerce expansion and logistics hub growth.</p>
+        </div>
+        <div class="overview-card">
+          <div class="overview-num">04</div>
+          <h4>Land &amp; Plots</h4>
+          <p>Plotted developments gaining popularity as long-term investment hedges. Tier-2 city infrastructure is pushing land values significantly higher.</p>
+        </div>
+      </div>
+      <div class="trends-strip">
+        <div class="trend-item">
+          <span class="trend-icon">🌱</span>
+          <strong>Sustainability (ESG)</strong>
+          <span>Green buildings command 10–12% premium</span>
+        </div>
+        <div class="trend-item">
+          <span class="trend-icon">📱</span>
+          <strong>Fractional Ownership</strong>
+          <span>Invest in high-value property with smaller capital</span>
+        </div>
+        <div class="trend-item">
+          <span class="trend-icon">🏙️</span>
+          <strong>Rise of Tier-2 Cities</strong>
+          <span>Land prices in secondary cities rising fast</span>
+        </div>
+        <div class="trend-item">
+          <span class="trend-icon">🤖</span>
+          <strong>Smart Homes</strong>
+          <span>AI &amp; IoT standard in new premium launches</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
   <section class="about section" id="about">
     <div class="container about-inner">
       <div class="about-left">
         <div class="about-img-stack">
-          <img class="about-img-main" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Team" loading="lazy" />
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="ED InfraTech Team" loading="lazy" />
           <img class="about-img-small" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" alt="Agent" loading="lazy" />
-          <div class="about-award">
-            <span class="award-icon">🏆</span>
-            <span>Best Agency 2024</span>
-          </div>
+          <div class="about-award"><span class="award-icon">🏆</span><span>Trusted &amp; RERA Compliant</span></div>
         </div>
       </div>
       <div class="about-right">
-        <div class="section-tag"><span class="tag-dot"></span>Our Uniqueness</div>
-        <h2 class="section-title">Real estate done<br /><em>differently</em></h2>
-        <p class="about-desc">We combine deep local expertise with modern technology to give you an unmatched property experience — whether you're buying, selling, or investing.</p>
+        <div class="section-tag"><span class="tag-dot"></span>About Us</div>
+        <h2 class="section-title">Where Vision<br /><em>Meets Reality</em></h2>
+        <p class="about-desc">At <strong>ED InfraTech</strong>, we believe real estate is more than a portfolio of square footage — it's the backdrop of your life's most important moments and the foundation of your financial legacy.</p>
+        <p class="about-desc">Our vision: to be the <strong>foundational partner for the world's most ambitious urban and industrial developments</strong> — delivering transparency, trust, and transformation at every step.</p>
         <div class="about-points">
           <div class="about-point">
             <span class="point-check">✓</span>
             <div>
-              <strong>Personalized Approach</strong>
-              <p>Every client gets a dedicated agent and custom strategy built around their unique goals.</p>
+              <strong>Client-First Approach</strong>
+              <p>We don't just close deals — we open doors to new opportunities. Your goals dictate our strategy.</p>
             </div>
           </div>
           <div class="about-point">
             <span class="point-check">✓</span>
             <div>
-              <strong>Transparent Process</strong>
-              <p>No hidden fees. No surprises. We keep you informed at every step of the transaction.</p>
+              <strong>Hyper-Local Expertise</strong>
+              <p>We don't just work in the community — we live here. We know the neighbourhoods, cycles, and hidden gems.</p>
             </div>
           </div>
           <div class="about-point">
             <span class="point-check">✓</span>
             <div>
-              <strong>Smart Technology</strong>
-              <p>AI-powered valuations, virtual tours, and real-time market data — all at your fingertips.</p>
+              <strong>100% RERA &amp; Legally Compliant</strong>
+              <p>Every project is RERA-registered and legally verified, with in-house legal assistance available for all clients.</p>
             </div>
           </div>
         </div>
@@ -304,7 +437,7 @@
     </div>
   </section>
 
-  <!-- ======= TESTIMONIALS ======= -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials section">
     <div class="container">
       <div class="section-tag"><span class="tag-dot"></span>Testimonials</div>
@@ -312,215 +445,164 @@
       <div class="testi-grid">
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p>"Realist helped us find our dream home in under 3 weeks. The team was responsive, knowledgeable and made the entire process seamless."</p>
+          <p>"ED InfraTech helped us find a RERA-approved plot in Noida within our budget. The team handled all legal paperwork — completely stress-free!"</p>
           <div class="testi-author">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop&crop=face" alt="Client" />
-            <div>
-              <strong>Emma Williams</strong>
-              <span>Home Buyer, NYC</span>
-            </div>
+            <div><strong>Priya Sharma</strong><span>Plot Buyer, Noida</span></div>
           </div>
         </div>
         <div class="testi-card testi-featured">
           <div class="testi-stars">★★★★★</div>
-          <p>"We sold our property 20% above asking price thanks to Realist's marketing strategy. Absolutely incredible service from start to finish."</p>
+          <p>"We invested in commercial property through ED InfraTech in Delhi. Their market knowledge and legal support made the process seamless and transparent."</p>
           <div class="testi-author">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="Client" />
-            <div>
-              <strong>Michael Torres</strong>
-              <span>Home Seller, LA</span>
-            </div>
+            <div><strong>Rajesh Agarwal</strong><span>Commercial Investor, Delhi</span></div>
           </div>
         </div>
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p>"Professional, fast, and reliable. Our agent found us the perfect rental in a competitive market. Highly recommend Realist to anyone!"</p>
+          <p>"Got a loan-approved residential villa in Vrindavan through ED InfraTech. Their loan assistance team saved us so much time. Highly recommend!"</p>
           <div class="testi-author">
             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Client" />
-            <div>
-              <strong>Sophie Chen</strong>
-              <span>Renter, Chicago</span>
-            </div>
+            <div><strong>Sunita Verma</strong><span>Villa Buyer, Vrindavan</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= FAQ ======= -->
+  <!-- FAQ -->
   <section class="faq section" id="faq">
     <div class="container faq-inner">
       <div class="faq-left">
         <div class="section-tag"><span class="tag-dot"></span>FAQ</div>
         <h2 class="section-title">Got<br /><em>questions?</em></h2>
-        <p>We've got answers to the most common questions about our services, listings, and process.</p>
+        <p>Everything you need to know about ED InfraTech, RERA compliance, loans, and legal assistance.</p>
         <a href="#contact" class="btn btn-dark">Contact Us</a>
       </div>
       <div class="faq-right">
         <div class="faq-item" tabindex="0">
-          <div class="faq-question">
-            <span>Can you help me sell my current home?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Yes! We don't just list homes — we help you get the best price. Our services include professional valuation, staging tips, photography, marketing campaigns, and handling offers.</p>
-          </div>
+          <div class="faq-question"><span>What does RERA Approved mean for my investment?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>A RERA-approved project is registered with the state Real Estate Regulatory Authority — the developer is legally accountable, your funds are protected in escrow, and you're guaranteed compensation for delays.</p></div>
         </div>
         <div class="faq-item" tabindex="0">
-          <div class="faq-question">
-            <span>What's the process for booking a home tour?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Just click the "Book a tour" button on the property you like, pick a time that works for you, and our team will confirm. In-person or virtual walk-through — your choice!</p>
-          </div>
+          <div class="faq-question"><span>Can you help me get a home loan?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Yes! We have partnerships with leading banks and NBFCs. Our loan team helps you compare rates, prepare documentation, and get approval — usually faster than going directly to a bank.</p></div>
         </div>
         <div class="faq-item" tabindex="0">
-          <div class="faq-question">
-            <span>Do you work with first-time buyers?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Absolutely! We specialize in guiding first-time buyers through every step — financing, inspections, negotiations, and closing. We make it simple and stress-free.</p>
-          </div>
+          <div class="faq-question"><span>Do you provide legal assistance for property purchase?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Absolutely. We offer full legal support: title verification, sale agreement drafting, registry assistance, and post-purchase documentation. Every transaction is completely secure.</p></div>
         </div>
         <div class="faq-item" tabindex="0">
-          <div class="faq-question">
-            <span>How long does the buying process take?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>On average, 30–60 days from offer acceptance to closing. We work hard to speed things up when possible and keep you updated throughout.</p>
-          </div>
+          <div class="faq-question"><span>Which locations do you have projects in?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Delhi, Noida, Jattari, Dankaur, Vrindavan, Haridwar, Dehradun, Khatushyam, Jaipur, Goa, Ghaziabad, Dholera, and Dubai. Contact us to know what's available near you.</p></div>
         </div>
         <div class="faq-item" tabindex="0">
-          <div class="faq-question">
-            <span>Are there any hidden fees?</span>
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-            <p>Never. We believe in total transparency. All fees are discussed upfront before you commit to anything. No surprises, ever.</p>
-          </div>
+          <div class="faq-question"><span>Are agricultural land purchases legally safe?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Yes. All our agricultural land listings go through thorough title verification and legal due diligence. Our legal team assists with the complete purchase and registration process.</p></div>
+        </div>
+        <div class="faq-item" tabindex="0">
+          <div class="faq-question"><span>Can I invest in Dubai properties through ED InfraTech?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Yes! We have curated Dubai listings for NRI investors and high-net-worth individuals. We handle all cross-border documentation, legal compliance, and financing options.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======= BLOG ======= -->
-  <section class="blog section" id="blog">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-tag"><span class="tag-dot"></span>Blogs</div>
-          <h2 class="section-title">News, stories,<br /><em>insights</em></h2>
-        </div>
-        <a href="#" class="btn btn-outline btn-sm">View All Posts</a>
-      </div>
-      <div class="blog-grid">
-        <div class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Blog" loading="lazy" />
-          </div>
-          <div class="blog-tag">Market Trends</div>
-          <h3>How to buy your first home in 2024: A complete guide</h3>
-          <div class="blog-meta">March 2024 · 6 min read</div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Blog" loading="lazy" />
-          </div>
-          <div class="blog-tag">Selling Tips</div>
-          <h3>Top 10 renovations that add value to your property</h3>
-          <div class="blog-meta">February 2024 · 5 min read</div>
-        </div>
-        <div class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80" alt="Blog" loading="lazy" />
-          </div>
-          <div class="blog-tag">Investment</div>
-          <h3>Is now the right time to invest in real estate?</h3>
-          <div class="blog-meta">January 2024 · 4 min read</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= CONTACT / CTA ======= -->
+  <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container contact-inner">
       <div class="contact-left">
         <div class="section-tag light"><span class="tag-dot light"></span>Get In Touch</div>
-        <h2 class="section-title light">Ready to find<br /><em>your home?</em></h2>
-        <p>Our agents are ready to assist. Reach out today and let's get started on your property journey.</p>
+        <h2 class="section-title light">Ready to invest<br /><em>smart?</em></h2>
+        <p>Our experts guide you through RERA-approved projects, loan options, and legal assistance — all in one place.</p>
         <div class="contact-info">
-          <div>📞 +1 (800) 555-REAL</div>
-          <div>✉️ hello@realist.com</div>
-          <div>📍 123 Property Lane, Los Angeles, CA</div>
+          <div>📞 Call / WhatsApp Us</div>
+          <div>✉️ info@edinframtech.com</div>
+          <div>📍 Delhi NCR, India</div>
+        </div>
+        <div class="contact-badges">
+          <span class="c-badge">✅ RERA Approved Projects</span>
+          <span class="c-badge">🏦 Loan Approved</span>
+          <span class="c-badge">🖋️ Legal Assistance</span>
+          <span class="c-badge">🌾 Agricultural Lands</span>
         </div>
       </div>
       <div class="contact-form-wrap">
         <form class="contact-form" id="contactForm">
           <div class="form-row">
             <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone / WhatsApp" required />
           </div>
+          <input type="email" placeholder="Email Address" />
           <select>
-            <option value="" disabled selected>I'm looking to...</option>
-            <option>Buy a Property</option>
-            <option>Sell My Home</option>
-            <option>Rent a Property</option>
-            <option>Property Management</option>
+            <option value="" disabled selected>I'm interested in...</option>
+            <option>Residential Property</option>
+            <option>Commercial Property</option>
+            <option>Agricultural Land</option>
+            <option>Investment / Plots</option>
+            <option>Home Loan Assistance</option>
+            <option>Legal Assistance</option>
+            <option>Dubai / International</option>
           </select>
-          <textarea placeholder="Tell us about your needs..." rows="4"></textarea>
-          <button type="submit" class="btn btn-light">Send Message →</button>
-          <div class="form-success" id="formSuccess">✓ Message sent! We'll be in touch soon.</div>
+          <select>
+            <option value="" disabled selected>Preferred Location</option>
+            <option>Delhi</option><option>Noida</option><option>Jattari</option>
+            <option>Dankaur</option><option>Vrindavan</option><option>Haridwar</option>
+            <option>Dehradun</option><option>Khatushyam</option><option>Jaipur</option>
+            <option>Goa</option><option>Ghaziabad</option><option>Dholera</option>
+            <option>Dubai</option>
+          </select>
+          <textarea placeholder="Any specific requirements or questions..." rows="3"></textarea>
+          <button type="submit" class="btn btn-light">Send Enquiry →</button>
+          <div class="form-success" id="formSuccess">✓ Enquiry sent! Our team will call you shortly.</div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ======= FOOTER ======= -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="logo" href="#">
-          <span class="logo-dot"></span>
-          Realist
+        <a class="logo footer-logo" href="#">
+          <img src="assets/edinlogo.png" alt="ED InfraTech" class="logo-img footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <span class="logo-fallback footer-logo-fallback"><span class="logo-dot"></span>ED InfraTech</span>
         </a>
-        <p>Premium real estate agency helping people find their perfect property since 2009.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="Twitter">tw</a>
-          <a href="#" aria-label="LinkedIn">in</a>
+        <p>RERA-approved real estate projects across Delhi NCR, India &amp; Dubai. Building futures, one property at a time.</p>
+        <div class="footer-badges">
+          <span>✅ RERA Approved</span>
+          <span>🏦 Loan Approved</span>
+          <span>🖋️ Legal Assistance</span>
         </div>
       </div>
       <div class="footer-links">
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="#">About Us</a>
-          <a href="#">Our Team</a>
-          <a href="#">Careers</a>
-          <a href="#">Press</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#rera">RERA Info</a>
+          <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
-          <a href="#">Buy</a>
-          <a href="#">Sell</a>
-          <a href="#">Rent</a>
-          <a href="#">Manage</a>
+          <h4>Projects</h4>
+          <a href="#projects">Residential</a>
+          <a href="#projects">Commercial</a>
+          <a href="#projects">Agricultural Land</a>
+          <a href="#projects">Dubai / International</a>
         </div>
         <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="#">Blog</a>
-          <a href="#">Market Reports</a>
-          <a href="#">Guides</a>
-          <a href="#">FAQ</a>
+          <h4>Locations</h4>
+          <a href="#locations">Delhi / Noida</a>
+          <a href="#locations">Vrindavan / Haridwar</a>
+          <a href="#locations">Jaipur / Goa</a>
+          <a href="#locations">Dubai</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 Realist. All rights reserved.</span>
-      <span>Privacy Policy · Terms of Service</span>
+      <span>© 2024 ED InfraTech. All rights reserved.</span>
+      <span>Privacy Policy · Terms · RERA Compliance</span>
     </div>
   </footer>
 
