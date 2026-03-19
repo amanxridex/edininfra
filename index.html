@@ -1,485 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>About Us - Aarambh Realtors</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realist – Real Estate Listing Agency</title>
+  <meta name="description" content="Premium real estate agency for property listing, buying, selling, and renting homes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Fragment+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <!-- Page Loader -->
-    <div class="page-loader">
-        <div class="loader-content">
-            <div class="loader-logo">
-                <img src="assets/logo-ar.png" alt="Aarambh Realtors">
-            </div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-        </div>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#">
+        <span class="logo-dot"></span>
+        Realist
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-dark">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="tag-dot"></span> Premium Properties
+      </div>
+      <h1 class="hero-title">
+        Find your<br />
+        <em>dream home</em><br />
+        today.
+      </h1>
+      <p class="hero-sub">
+        We connect buyers, sellers & renters with the finest properties — luxury villas, modern apartments, family homes and more.
+      </p>
+      <div class="hero-actions">
+        <a href="#listings" class="btn btn-dark">Browse Listings</a>
+        <a href="#contact" class="btn btn-outline">Book a Tour</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="1200">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Properties Listed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="840">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="15">0</span><span class="stat-plus"></span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-img-card">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80" alt="Luxury Home" loading="eager" />
+        <div class="hero-img-badge">
+          <span class="badge-tag">For Sale</span>
+          <span class="badge-price">$2,400,000</span>
+        </div>
+      </div>
+      <div class="hero-float-card">
+        <div class="float-avatar">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face" alt="Agent" />
+        </div>
+        <div>
+          <div class="float-name">Sarah Johnson</div>
+          <div class="float-role">Senior Agent</div>
+        </div>
+        <div class="float-rating">★ 4.9</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo-ar.png" alt="Aarambh Realtors">
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <ul class="nav-links desktop-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+  <!-- ======= MARQUEE ======= -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Luxury Villas</span><span class="dot">·</span>
+      <span>Modern Apartments</span><span class="dot">·</span>
+      <span>Family Homes</span><span class="dot">·</span>
+      <span>Commercial Space</span><span class="dot">·</span>
+      <span>Beachfront Properties</span><span class="dot">·</span>
+      <span>Penthouses</span><span class="dot">·</span>
+      <span>Luxury Villas</span><span class="dot">·</span>
+      <span>Modern Apartments</span><span class="dot">·</span>
+      <span>Family Homes</span><span class="dot">·</span>
+      <span>Commercial Space</span><span class="dot">·</span>
+      <span>Beachfront Properties</span><span class="dot">·</span>
+      <span>Penthouses</span><span class="dot">·</span>
+    </div>
+  </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <!-- ======= LISTINGS ======= -->
+  <section class="listings section" id="listings">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><span class="tag-dot"></span>Featured Listings</div>
+        <h2 class="section-title">Properties worth<br /><em>exploring</em></h2>
+        <a href="#" class="btn btn-outline btn-sm">View All</a>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sale">For Sale</button>
+        <button class="filter-btn" data-filter="rent">For Rent</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+      </div>
+      <div class="listings-grid" id="listingsGrid">
+
+        <div class="prop-card" data-type="sale luxury">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80" alt="Villa" loading="lazy" />
+            <span class="prop-badge sale">For Sale</span>
+            <button class="prop-fav" aria-label="Save">♡</button>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price">$3,200,000</div>
+            <div class="prop-name">Skyline Luxury Villa</div>
+            <div class="prop-loc">📍 Beverly Hills, CA</div>
+            <div class="prop-meta">
+              <span>5 Bed</span><span>4 Bath</span><span>4,200 sqft</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <div class="mobile-nav" id="mobileNav">
-            <div class="mobile-nav-header">
-                <img src="assets/logo-ar.png" alt="Aarambh Realtors" class="mobile-logo">
-                <button class="mobile-close" id="mobileClose" aria-label="Close Menu">
-                    <i class="fas fa-times"></i>
-                </button>
+        <div class="prop-card featured" data-type="sale">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="Modern Home" loading="lazy" />
+            <span class="prop-badge sale">For Sale</span>
+            <button class="prop-fav" aria-label="Save">♡</button>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price">$1,850,000</div>
+            <div class="prop-name">Modern Glass House</div>
+            <div class="prop-loc">📍 Malibu, CA</div>
+            <div class="prop-meta">
+              <span>4 Bed</span><span>3 Bath</span><span>3,100 sqft</span>
             </div>
-            <ul class="mobile-nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About Us</a></li>
-                <li><a href="projects.html"><i class="fas fa-building"></i> Projects</a></li>
-                <li><a href="index.html#services"><i class="fas fa-cogs"></i> Services</a></li>
-                <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
-            </ul>
-            <div class="mobile-nav-footer">
-                <a href="tel:9810319001" class="mobile-call-btn">
-                    <i class="fas fa-phone"></i> Call Now
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="about-hero">
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-overlay"></div>
-        
-        <div class="hero-content">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <i class="fas fa-chevron-right"></i>
-                <span>About Us</span>
-            </div>
-            
-            <h1 class="reveal-text">
-                <span class="line">We Build</span>
-                <span class="line highlight">Trust</span>
-                <span class="line">& Deliver</span>
-                <span class="line highlight">Dreams</span>
-            </h1>
-            
-            <p class="hero-subtitle">Your Premier Real Estate Partner Since 2023</p>
-            
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Floating Stats -->
-        <div class="floating-stats">
-            <div class="stat-card">
-                <span class="stat-number" data-target="500">0</span>
-                <span class="stat-label">Happy Clients</span>
+        <div class="prop-card" data-type="rent">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Apartment" loading="lazy" />
+            <span class="prop-badge rent">For Rent</span>
+            <button class="prop-fav" aria-label="Save">♡</button>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price">$6,500<span>/mo</span></div>
+            <div class="prop-name">Downtown Penthouse</div>
+            <div class="prop-loc">📍 Manhattan, NY</div>
+            <div class="prop-meta">
+              <span>3 Bed</span><span>2 Bath</span><span>2,400 sqft</span>
             </div>
-            <div class="stat-card">
-                <span class="stat-number" data-target="150">0</span>
-                <span class="stat-label">Projects Done</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" data-target="10">0</span>
-                <span class="stat-label">Years Experience</span>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Story Section -->
-    <section class="story-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Story</span>
-                <h2>Who We Are</h2>
+        <div class="prop-card" data-type="sale luxury">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Estate" loading="lazy" />
+            <span class="prop-badge sale">For Sale</span>
+            <button class="prop-fav" aria-label="Save">♡</button>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price">$5,700,000</div>
+            <div class="prop-name">Oceanfront Estate</div>
+            <div class="prop-loc">📍 Miami Beach, FL</div>
+            <div class="prop-meta">
+              <span>6 Bed</span><span>5 Bath</span><span>6,800 sqft</span>
             </div>
-            
-            <div class="story-content">
-                <div class="story-text">
-                    <div class="text-block" data-reveal="up">
-                        <h3>The Beginning</h3>
-                        <p>Founded in 2023, Aarambh Realtors started with a simple mission - to transform the real estate experience in India. What began as a small team of passionate professionals has grown into one of the most trusted names in the industry.</p>
-                    </div>
-                    
-                    <div class="text-block" data-reveal="up" data-delay="0.1">
-                        <h3>Our Philosophy</h3>
-                        <p>We believe that every property transaction is more than just business - it's about helping families find their perfect home, assisting investors in making smart decisions, and contributing to the growth of communities.</p>
-                    </div>
-                    
-                    <div class="text-block" data-reveal="up" data-delay="0.2">
-                        <h3>Today & Beyond</h3>
-                        <p>With over 500 satisfied clients and 150+ successful projects, we continue to push boundaries. Our commitment to transparency, innovation, and customer satisfaction remains stronger than ever.</p>
-                    </div>
-                </div>
-                
-                <div class="story-visual" data-reveal="up" data-delay="0.3">
-                    <div class="visual-container">
-                        <div class="rotating-ring ring-1"></div>
-                        <div class="rotating-ring ring-2"></div>
-                        <div class="center-content">
-                            <i class="fas fa-building"></i>
-                            <span>Est. 2023</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Office Gallery Section -->
-    <section class="office-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">Our Workspace</span>
-                <h2>Where Dreams Take Shape</h2>
-                <p>Step inside our modern office designed for creativity and collaboration</p>
+        <div class="prop-card" data-type="rent">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=600&q=80" alt="Condo" loading="lazy" />
+            <span class="prop-badge rent">For Rent</span>
+            <button class="prop-fav" aria-label="Save">♡</button>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price">$3,200<span>/mo</span></div>
+            <div class="prop-name">Urban Studio Condo</div>
+            <div class="prop-loc">📍 Chicago, IL</div>
+            <div class="prop-meta">
+              <span>2 Bed</span><span>1 Bath</span><span>1,100 sqft</span>
             </div>
-            
-            <div class="gallery-container">
-                <div class="gallery-main" data-reveal="up">
-                    <div class="gallery-image active" data-index="0">
-                        <img src="assets/1.jpeg" alt="Office Reception">
-                        <div class="image-caption">
-                            <h4>Welcome Area</h4>
-                            <p>Where first impressions are made</p>
-                        </div>
-                    </div>
-                    <div class="gallery-image" data-index="1">
-                        <img src="assets/2.jpeg" alt="Office Interior">
-                        <div class="image-caption">
-                            <h4>Work Floor</h4>
-                            <p>Where ideas come to life</p>
-                        </div>
-                    </div>
-                    <div class="gallery-image" data-index="2">
-                        <img src="assets/3.jpeg" alt="Meeting Room">
-                        <div class="image-caption">
-                            <h4>Conference Room</h4>
-                            <p>Where deals are sealed</p>
-                        </div>
-                    </div>
-                    <div class="gallery-image" data-index="3">
-                        <img src="assets/4.jpeg" alt="Team Area">
-                        <div class="image-caption">
-                            <h4>Collaboration Zone</h4>
-                            <p>Where teamwork thrives</p>
-                        </div>
-                    </div>
-                    
-                    <button class="gallery-nav prev" onclick="changeImage(-1)" aria-label="Previous Image">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="gallery-nav next" onclick="changeImage(1)" aria-label="Next Image">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    
-                    <div class="gallery-progress">
-                        <div class="progress-bar"></div>
-                    </div>
-                </div>
-                
-                <div class="gallery-thumbs" data-reveal="up" data-delay="0.2">
-                    <div class="thumb active" onclick="setImage(0)">
-                        <img src="assets/1.jpeg" alt="Thumb 1">
-                    </div>
-                    <div class="thumb" onclick="setImage(1)">
-                        <img src="assets/2.jpeg" alt="Thumb 2">
-                    </div>
-                    <div class="thumb" onclick="setImage(2)">
-                        <img src="assets/3.jpeg" alt="Thumb 3">
-                    </div>
-                    <div class="thumb" onclick="setImage(3)">
-                        <img src="assets/4.jpeg" alt="Thumb 4">
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag light">Our DNA</span>
-                <h2 class="light">Core Values</h2>
+        <div class="prop-card" data-type="sale luxury">
+          <div class="prop-img-wrap">
+            <img src="https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?w=600&q=80" alt="House" loading="lazy" />
+            <span class="prop-badge sale">For Sale</span>
+            <button class="prop-fav" aria-label="Save">♡</button>
+          </div>
+          <div class="prop-body">
+            <div class="prop-price">$2,100,000</div>
+            <div class="prop-name">Hillside Retreat</div>
+            <div class="prop-loc">📍 Bel Air, CA</div>
+            <div class="prop-meta">
+              <span>5 Bed</span><span>4 Bath</span><span>3,900 sqft</span>
             </div>
-            
-            <div class="values-grid">
-                <div class="value-card" data-reveal="up" data-delay="0">
-                    <div class="value-icon">
-                        <div class="icon-bg"></div>
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>We believe in honest dealings and transparent communication. Every promise we make, we keep.</p>
-                    <div class="value-number">01</div>
-                </div>
-                
-                <div class="value-card" data-reveal="up" data-delay="0.1">
-                    <div class="value-icon">
-                        <div class="icon-bg"></div>
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation</h3>
-                    <p>We constantly evolve our methods and embrace technology to deliver better results.</p>
-                    <div class="value-number">02</div>
-                </div>
-                
-                <div class="value-card" data-reveal="up" data-delay="0.2">
-                    <div class="value-icon">
-                        <div class="icon-bg"></div>
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Client First</h3>
-                    <p>Your needs drive our decisions. We listen, understand, and deliver personalized solutions.</p>
-                    <div class="value-number">03</div>
-                </div>
-                
-                <div class="value-card" data-reveal="up" data-delay="0.3">
-                    <div class="value-icon">
-                        <div class="icon-bg"></div>
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Excellence</h3>
-                    <p>We don't settle for good enough. Every project deserves our absolute best effort.</p>
-                    <div class="value-number">04</div>
-                </div>
-            </div>
+          </div>
         </div>
-        
-        <div class="values-bg">
-            <div class="bg-circle circle-1"></div>
-            <div class="bg-circle circle-2"></div>
-        </div>
-    </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">Leadership</span>
-                <h2>Meet The Team</h2>
-                <p>The visionaries behind Aarambh Realtors</p>
-            </div>
-            
-            <div class="team-grid">
-                <div class="team-card" data-reveal="up" data-delay="0">
-                    <div class="card-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Karan Sharma</h4>
-                        <span class="role">Founder & CEO</span>
-                        <p>20+ years in real estate development</p>
-                    </div>
-                </div>
-                
-                <div class="team-card" data-reveal="up" data-delay="0.1">
-                    <div class="card-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Neeru Garg</h4>
-                        <span class="role">Managing Director</span>
-                        <p>Expert in residential projects</p>
-                    </div>
-                </div>
-                
-                <div class="team-card" data-reveal="up" data-delay="0.2">
-                    <div class="card-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Mukesh Sharma</h4>
-                        <span class="role">Head of Sales</span>
-                        <p>Specialist in commercial properties</p>
-                    </div>
-                </div>
-                
-                <div class="team-card" data-reveal="up" data-delay="0.3">
-                    <div class="card-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Swati Sharma</h4>
-                        <span class="role">Marketing Head</span>
-                        <p>Brand strategist and digital expert</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-tag">Journey</span>
-                <h2>Our Milestones</h2>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-item" data-reveal="up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">2023</span>
-                        <h4>The Beginning</h4>
-                        <p>Aarambh Realtors founded with a team of 5 passionate individuals</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-reveal="up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">2017</span>
-                        <h4>First Major Project</h4>
-                        <p>Successfully delivered 50+ residential units in Noida</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-reveal="up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">2019</span>
-                        <h4>Expansion</h4>
-                        <p>Opened offices in Gurgaon and Ghaziabad</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-reveal="up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">2021</span>
-                        <h4>Digital Transformation</h4>
-                        <p>Launched virtual property tours and online booking</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-reveal="up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">2023</span>
-                        <h4>Industry Recognition</h4>
-                        <p>Awarded "Best Emerging Realtor" by Realty Awards</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-reveal="up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">2025</span>
-                        <h4>Pan India Presence</h4>
-                        <p>Operations in 10+ cities with 500+ happy clients</p>
-                    </div>
-                </div>
-            </div>
+  <!-- ======= SERVICES ======= -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-tag"><span class="tag-dot"></span>Our Services</div>
+      <h2 class="section-title">Everything you need,<br /><em>under one roof</em></h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Buy a Property</h3>
+          <p>Find your perfect home from our curated selection of listings. Expert guidance every step of the way.</p>
+          <a href="#" class="service-link">Learn more →</a>
         </div>
-    </section>
+        <div class="service-card highlight">
+          <div class="service-icon">💰</div>
+          <h3>Sell Your Home</h3>
+          <p>Get the best market value with our professional valuation, staging, photography & marketing campaigns.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔑</div>
+          <h3>Rent & Lease</h3>
+          <p>Discover rental properties that match your lifestyle — vetted listings, flexible terms, fast move-in.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Property Management</h3>
+          <p>We handle maintenance, tenants & finances for landlords — so you can enjoy passive income stress-free.</p>
+          <a href="#" class="service-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content" data-reveal="up">
-                <h2>Ready to Start Your Journey?</h2>
-                <p>Let's find your perfect property together</p>
-                <div class="cta-buttons">
-                    <a href="projects.html" class="btn-primary">View Projects</a>
-                    <a href="contact.html" class="btn-secondary">Contact Us</a>
-                </div>
+  <!-- ======= ABOUT / UNIQUENESS ======= -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-left">
+        <div class="about-img-stack">
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80" alt="Team" loading="lazy" />
+          <img class="about-img-small" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" alt="Agent" loading="lazy" />
+          <div class="about-award">
+            <span class="award-icon">🏆</span>
+            <span>Best Agency 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="section-tag"><span class="tag-dot"></span>Our Uniqueness</div>
+        <h2 class="section-title">Real estate done<br /><em>differently</em></h2>
+        <p class="about-desc">We combine deep local expertise with modern technology to give you an unmatched property experience — whether you're buying, selling, or investing.</p>
+        <div class="about-points">
+          <div class="about-point">
+            <span class="point-check">✓</span>
+            <div>
+              <strong>Personalized Approach</strong>
+              <p>Every client gets a dedicated agent and custom strategy built around their unique goals.</p>
             </div>
+          </div>
+          <div class="about-point">
+            <span class="point-check">✓</span>
+            <div>
+              <strong>Transparent Process</strong>
+              <p>No hidden fees. No surprises. We keep you informed at every step of the transaction.</p>
+            </div>
+          </div>
+          <div class="about-point">
+            <span class="point-check">✓</span>
+            <div>
+              <strong>Smart Technology</strong>
+              <p>AI-powered valuations, virtual tours, and real-time market data — all at your fingertips.</p>
+            </div>
+          </div>
         </div>
-        
-        <div class="cta-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-        </div>
-    </section>
+        <a href="#contact" class="btn btn-dark">Work With Us</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/logo-ar.png" alt="Aarambh Realtors" class="footer-logo">
-                    <p>Building trust, delivering dreams. Your trusted real estate partner since 2023.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 172/B Tower A, The Corenthum, Sector 62, Noida</p>
-                    <p><i class="fas fa-phone"></i> 9810319001</p>
-                    <p><i class="fas fa-envelope"></i> info@aarambhrealtors.com</p>
-                </div>
+  <!-- ======= TESTIMONIALS ======= -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-tag"><span class="tag-dot"></span>Testimonials</div>
+      <h2 class="section-title">What our clients<br /><em>are saying</em></h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Realist helped us find our dream home in under 3 weeks. The team was responsive, knowledgeable and made the entire process seamless."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop&crop=face" alt="Client" />
+            <div>
+              <strong>Emma Williams</strong>
+              <span>Home Buyer, NYC</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Aarambh Realtors. All Rights Reserved.</p>
-            </div>
+          </div>
         </div>
-    </footer>
+        <div class="testi-card testi-featured">
+          <div class="testi-stars">★★★★★</div>
+          <p>"We sold our property 20% above asking price thanks to Realist's marketing strategy. Absolutely incredible service from start to finish."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="Client" />
+            <div>
+              <strong>Michael Torres</strong>
+              <span>Home Seller, LA</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Professional, fast, and reliable. Our agent found us the perfect rental in a competitive market. Highly recommend Realist to anyone!"</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Client" />
+            <div>
+              <strong>Sophie Chen</strong>
+              <span>Renter, Chicago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="about.js"></script>
+  <!-- ======= FAQ ======= -->
+  <section class="faq section" id="faq">
+    <div class="container faq-inner">
+      <div class="faq-left">
+        <div class="section-tag"><span class="tag-dot"></span>FAQ</div>
+        <h2 class="section-title">Got<br /><em>questions?</em></h2>
+        <p>We've got answers to the most common questions about our services, listings, and process.</p>
+        <a href="#contact" class="btn btn-dark">Contact Us</a>
+      </div>
+      <div class="faq-right">
+        <div class="faq-item" tabindex="0">
+          <div class="faq-question">
+            <span>Can you help me sell my current home?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We don't just list homes — we help you get the best price. Our services include professional valuation, staging tips, photography, marketing campaigns, and handling offers.</p>
+          </div>
+        </div>
+        <div class="faq-item" tabindex="0">
+          <div class="faq-question">
+            <span>What's the process for booking a home tour?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Just click the "Book a tour" button on the property you like, pick a time that works for you, and our team will confirm. In-person or virtual walk-through — your choice!</p>
+          </div>
+        </div>
+        <div class="faq-item" tabindex="0">
+          <div class="faq-question">
+            <span>Do you work with first-time buyers?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! We specialize in guiding first-time buyers through every step — financing, inspections, negotiations, and closing. We make it simple and stress-free.</p>
+          </div>
+        </div>
+        <div class="faq-item" tabindex="0">
+          <div class="faq-question">
+            <span>How long does the buying process take?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>On average, 30–60 days from offer acceptance to closing. We work hard to speed things up when possible and keep you updated throughout.</p>
+          </div>
+        </div>
+        <div class="faq-item" tabindex="0">
+          <div class="faq-question">
+            <span>Are there any hidden fees?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Never. We believe in total transparency. All fees are discussed upfront before you commit to anything. No surprises, ever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= BLOG ======= -->
+  <section class="blog section" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-tag"><span class="tag-dot"></span>Blogs</div>
+          <h2 class="section-title">News, stories,<br /><em>insights</em></h2>
+        </div>
+        <a href="#" class="btn btn-outline btn-sm">View All Posts</a>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Blog" loading="lazy" />
+          </div>
+          <div class="blog-tag">Market Trends</div>
+          <h3>How to buy your first home in 2024: A complete guide</h3>
+          <div class="blog-meta">March 2024 · 6 min read</div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Blog" loading="lazy" />
+          </div>
+          <div class="blog-tag">Selling Tips</div>
+          <h3>Top 10 renovations that add value to your property</h3>
+          <div class="blog-meta">February 2024 · 5 min read</div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80" alt="Blog" loading="lazy" />
+          </div>
+          <div class="blog-tag">Investment</div>
+          <h3>Is now the right time to invest in real estate?</h3>
+          <div class="blog-meta">January 2024 · 4 min read</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT / CTA ======= -->
+  <section class="contact section" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-left">
+        <div class="section-tag light"><span class="tag-dot light"></span>Get In Touch</div>
+        <h2 class="section-title light">Ready to find<br /><em>your home?</em></h2>
+        <p>Our agents are ready to assist. Reach out today and let's get started on your property journey.</p>
+        <div class="contact-info">
+          <div>📞 +1 (800) 555-REAL</div>
+          <div>✉️ hello@realist.com</div>
+          <div>📍 123 Property Lane, Los Angeles, CA</div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Email Address" required />
+          </div>
+          <select>
+            <option value="" disabled selected>I'm looking to...</option>
+            <option>Buy a Property</option>
+            <option>Sell My Home</option>
+            <option>Rent a Property</option>
+            <option>Property Management</option>
+          </select>
+          <textarea placeholder="Tell us about your needs..." rows="4"></textarea>
+          <button type="submit" class="btn btn-light">Send Message →</button>
+          <div class="form-success" id="formSuccess">✓ Message sent! We'll be in touch soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#">
+          <span class="logo-dot"></span>
+          Realist
+        </a>
+        <p>Premium real estate agency helping people find their perfect property since 2009.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Twitter">tw</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Our Team</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">Buy</a>
+          <a href="#">Sell</a>
+          <a href="#">Rent</a>
+          <a href="#">Manage</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Blog</a>
+          <a href="#">Market Reports</a>
+          <a href="#">Guides</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Realist. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
