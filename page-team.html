@@ -12,12 +12,93 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+<style>
+/* Modern Sexy Splash Screen */
+.custom-splash {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: #0b1a2e; /* Dark Blue from ED logo */
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: splashFadeOut 0.8s ease-in-out 4.2s forwards;
+}
+
+.splash-logo {
+    width: 280px;
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+    animation: logoReveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards, logoPulse 2s ease-in-out 1.5s infinite;
+}
+
+.splash-lines {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(200, 160, 50, 0.15));
+    transform-origin: bottom;
+    animation: buildUp 3s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.splash-text {
+    margin-top: 30px;
+    color: #c8a032; /* Gold from logo */
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    letter-spacing: 8px;
+    opacity: 0;
+    animation: textFade 1.5s ease-in-out 1.2s forwards;
+    text-transform: uppercase;
+}
+
+@keyframes logoReveal {
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(200,160,50,0.4)); }
+    100% { transform: scale(1); }
+}
+
+@keyframes textFade {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes buildUp {
+    0% { height: 0; opacity: 0; }
+    30% { opacity: 1; }
+    100% { height: 40vh; opacity: 0; }
+}
+
+@keyframes splashFadeOut {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-100vh); visibility: hidden; }
+}
+
+/* Hide default preloader */
+.preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }
+</style>
+
 </head>
 
 <body>
   <div class="page-wrapper">
 
-    <div class="preloader"></div>
+    
+<div class="custom-splash">
+    <img src="images/logo.png" class="splash-logo" alt="ED Infratech">
+    <div class="splash-text">Building Visions</div>
+    <div class="splash-lines"></div>
+</div>
+
+<div class="preloader" style="display:none;"></div>
 
     <!-- Back-to-top start -->
     <div class="back-to-top-wrapper">
@@ -38,10 +119,10 @@
             <div class="left-box">
               <div class="logo-box">
                 <div class="logo one">
-                  <a href="index-2.html"><img src="images/logo3.png" alt="Logo"></a>
+                  <a href="index.html"><img src="images/logo3.png" alt="Logo"></a>
                 </div>
                 <div class="logo two">
-                  <a href="index-2.html"><img src="images/logo2.png" alt="Logo"></a>
+                  <a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
                 </div>
               </div>
               <!--Nav Box-->
@@ -126,7 +207,7 @@
         <nav class="menu-box">
           <div class="upper-box">
             <div class="nav-logo">
-              <a href="index-2.html"><img src="images/logo3.png" alt=""></a>
+              <a href="index.html"><img src="images/logo3.png" alt=""></a>
             </div>
             <div class="close-btn"><i class="icon fa fa-times"></i></div>
           </div>
@@ -180,7 +261,7 @@
           <div class="inner-container">
             <!--Logo-->
             <div class="logo">
-              <a href="index-2.html"><img src="images/logo2.png" alt=""></a>
+              <a href="index.html"><img src="images/logo2.png" alt=""></a>
             </div>
 
             <!--Right Col-->
@@ -223,7 +304,7 @@
         <div class="title-outer text-center">
            <div class="h1 title">Team</div>
           <ul class="page-breadcrumb">
-            <li><a href="index-2.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li>Team</li>
           </ul>
         </div>
