@@ -19502,3 +19502,25 @@ Sidebar
 .team-contact-form .sec-title .section-title__title {
   color: var(--headings-color);
 }
+
+/* Fix for Newmanind Footer Image */
+.footer-style-one .shape-1 {
+    left: 50% !important;
+    transform: translateX(-50%);
+    bottom: 0 !important;
+}
+.footer-style-one .shape-1 img {
+    max-height: 520px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+@media (max-width: 1599.98px) {
+  .footer-style-one .shape-1 { left: 50% !important; }
+}
+@media (max-width: 1299.98px) {
+  .footer-style-one .shape-1 { left: 50% !important; }
+}
+@media (max-width: 1199.98px) {
+  .footer-style-one .shape-1 { display: none !important; }
+}
