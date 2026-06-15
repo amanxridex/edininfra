@@ -50,11 +50,11 @@ License: copyright commercial
   --r: 30px; /* radius */
   --s: 50px; /* size of the inner curve*/
   --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%) no-repeat;
-  --theme-color1: #eeff04;
+  --theme-color1: #E0A631;
   --theme-color2: #222222;
   --theme-color3: #1b1f12;
   --theme-color4: #0d0d0d;
-  --theme-color1-rgb: 238, 255, 4;
+  --theme-color1-rgb: 224, 166, 49;
   --theme-color2-rgb: 34, 34, 34;
   --theme-color3-rgb: 27, 31, 18;
   --theme-color4-rgb: 13, 13, 13;
