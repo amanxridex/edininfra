@@ -1,9 +1,10 @@
-<!DOCTYPE html><html style="height:100%"><head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title> 404 Not Found
-</title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style>
-<style>
-/* Ultra-Premium White Splash Screen */
+const fs = require('fs');
+const path = require('path');
+
+const targetDir = 'c:/Users/91836/PERSONAL/edinmaster/ED';
+const files = fs.readdirSync(targetDir).filter(f => f.endsWith('.html'));
+
+const newSplashStyle = `/* Ultra-Premium White Splash Screen */
 .custom-splash {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
@@ -100,17 +101,36 @@
 }
 
 /* Hide default preloader */
-.preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }
-</style>
+.preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }`;
 
-</head>
-<body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
-<div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
-        <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
-<h2 style="margin-top:20px;font-size: 30px;">Not Found
-</h2>
-<p>The resource requested could not be found on this server!</p>
-</div></div><div style="color:#f0f0f0; font-size:12px;margin:auto;padding:0px 30px 0px 30px;position:relative;clear:both;height:100px;margin-top:-101px;background-color:#474747;border-top: 1px solid rgba(0,0,0,0.15);box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;">
-<br>Proudly powered by LiteSpeed Web Server<p>Please be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.</p></div><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;88f4fa328f314d4c95a104b4a60b2313&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+const newSplashHtml = `<div class="custom-splash">
+    <img src="images/logo.png" class="splash-logo" alt="ED Infratech">
+    <div class="splash-accent-line"></div>
+    <div class="splash-text-container">
+        <div class="splash-text">Building <span>Visions</span></div>
+    </div>
+</div>`;
 
-</body></html>
+files.forEach(file => {
+    const filePath = path.join(targetDir, file);
+    let html = fs.readFileSync(filePath, 'utf8');
+    
+    let updated = false;
+
+    // Replace old style
+    if (html.includes('/* Modern Sexy Splash Screen */')) {
+        html = html.replace(/\/\* Modern Sexy Splash Screen \*\/(.|\n)*?\.preloader \{ display: none !important; opacity: 0 !important; visibility: hidden !important; \}/, newSplashStyle);
+        updated = true;
+    }
+
+    // Replace old HTML
+    if (html.includes('<div class="custom-splash">')) {
+        html = html.replace(/<div class="custom-splash">(.|\n)*?<\/div>\s*<\/div>/, newSplashHtml);
+        updated = true;
+    }
+
+    if (updated) {
+        fs.writeFileSync(filePath, html, 'utf8');
+        console.log(`Upgraded splash screen in ${file}`);
+    }
+});
