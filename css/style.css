@@ -19549,3 +19549,10 @@ Sidebar
 @media (max-width: 1299.98px) {
   .footer-style-one .shape-1 { left: 25% !important; }
 }
+
+
+/* Upgrade Main Menu Text: Bigger and Bolder */
+.main-header .main-menu .navigation > li > a {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
