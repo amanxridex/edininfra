@@ -4680,10 +4680,12 @@ Main Header
   color: var(--theme-color-dark);
 }
 
-.sticky-header .main-menu .navigation > li.current > a,
-.sticky-header .main-menu .navigation > li > a,
-.sticky-header .main-menu .navigation > li:hover > a {
+.sticky-header .main-menu .navigation > li > a {
   color: var(--theme-color-black);
+}
+.sticky-header .main-menu .navigation > li.current > a,
+.sticky-header .main-menu .navigation > li:hover > a {
+  color: var(--theme-color1);
 }
 [data-tm-layout=lemon] .sticky-header .main-menu .navigation > li.current > a,
 [data-tm-layout=lemon] .sticky-header .main-menu .navigation > li > a,
