@@ -4329,7 +4329,7 @@ Main Header
           align-items: center;
 }
 .header-style-one .header-lower .inner-container .main-box .logo-box .logo {
-  max-width: 160px;
+  max-width: 240px;
 }
 @media (max-width: 1024px) {
   .header-style-one .header-lower .inner-container .main-box .right-box .theme-btn {
@@ -4637,7 +4637,7 @@ Main Header
   padding: 19px 0 20px;
 }
 .sticky-header .logo img {
-  max-height: 46.5px;
+  max-height: 70px;
 }
 .sticky-header .nav-outer {
   position: relative;
