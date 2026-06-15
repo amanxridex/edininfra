@@ -19524,3 +19524,16 @@ Sidebar
 @media (max-width: 1199.98px) {
   .footer-style-one .shape-1 { display: none !important; }
 }
+
+
+/* Re-align Newmanind Footer Image to Left */
+.footer-style-one .shape-1 {
+    left: 30.5% !important;
+    transform: none !important;
+}
+@media (max-width: 1599.98px) {
+  .footer-style-one .shape-1 { left: 23% !important; }
+}
+@media (max-width: 1299.98px) {
+  .footer-style-one .shape-1 { left: 19% !important; }
+}
