@@ -19558,3 +19558,7 @@ Sidebar
     font-size: 18px !important;
     font-weight: 700 !important;
 }
+
+/* Fix double scrollbars */
+html, body { overflow-x: hidden !important; max-width: 100%; }
+
