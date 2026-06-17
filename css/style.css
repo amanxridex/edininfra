@@ -19567,3 +19567,9 @@ html, body { overflow-x: hidden !important; max-width: 100%; }
 
 .team-block .inner-block .images-box .image img { height: 380px; object-fit: cover; object-position: top; width: 100%; }
 
+
+/* Custom Testimonial Size Overrides */
+.testimonial-block .inner-block { padding: 25px !important; gap: 20px !important; }
+.testimonial-block .inner-block .image-box .inner-box { width: 160px !important; height: 160px !important; }
+.testimonial-block .inner-block .content-box .inner-box .text { font-size: 14px !important; line-height: 24px !important; padding-bottom: 15px !important; }
+
