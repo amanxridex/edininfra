@@ -19577,3 +19577,23 @@ html, body { overflow-x: hidden !important; max-width: 100%; }
 /* Center client logos */
 .client-section .swiper-wrapper { justify-content: center; }
 
+
+/* Center Navigation in headers */
+.header-style-two .header-lower .inner-container .main-box {
+    justify-content: space-between;
+}
+.header-style-two .header-lower .inner-container .main-box .left-box {
+    gap: 0 !important;
+    flex: 1;
+}
+.header-style-two .header-lower .inner-container .main-box .left-box .nav-outer {
+    margin: 0 auto;
+}
+.header-style-two .header-lower .inner-container .main-box .right-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.header-style-one .header-lower .inner-container .main-box .nav-outer {
+    margin: 0 auto;
+}
