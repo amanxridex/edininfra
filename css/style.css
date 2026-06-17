@@ -19613,3 +19613,26 @@ body {
 .header-style-one .header-lower .inner-container .main-box .nav-outer {
     margin: 0 auto;
 }
+
+/* Highlight MD card */
+.team-block.featured .inner-block {
+    border: 3px solid var(--theme-color1) !important;
+    box-shadow: 0 15px 35px rgba(200, 160, 50, 0.25) !important;
+    position: relative;
+}
+.team-block.featured .inner-block::after {
+    content: 'MANAGING DIRECTOR';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #c8a032, #a67c1e);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 1.5px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-family: 'Inter', sans-serif;
+}
