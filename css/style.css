@@ -19573,3 +19573,7 @@ html, body { overflow-x: hidden !important; max-width: 100%; }
 .testimonial-block .inner-block .image-box .inner-box { width: 160px !important; height: 160px !important; }
 .testimonial-block .inner-block .content-box .inner-box .text { font-size: 14px !important; line-height: 24px !important; padding-bottom: 15px !important; }
 
+
+/* Center client logos */
+.client-section .swiper-wrapper { justify-content: center; }
+
