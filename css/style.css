@@ -19560,7 +19560,17 @@ Sidebar
 }
 
 /* Fix double scrollbars */
-html, body { overflow-x: hidden !important; max-width: 100%; }
+html {
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+}
+body {
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+}
+.page-wrapper {
+    overflow-y: visible !important;
+}
 
 
 
