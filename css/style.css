@@ -19605,3 +19605,17 @@ Sidebar
     font-family: 'Inter', sans-serif;
 }
 
+/* Custom Dropdown Styling */
+.main-menu .navigation > li > ul,
+.main-menu .navigation > li > ul > li > ul {
+    background-color: #0b1a30 !important; /* Dark blue background */
+}
+.main-menu .navigation > li > ul > li > a,
+.main-menu .navigation > li > ul > li > ul > li > a {
+    color: #ffffff !important; /* White text */
+}
+.main-menu .navigation > li > ul > li:hover > a,
+.main-menu .navigation > li > ul > li > ul > li:hover > a {
+    color: var(--theme-color1) !important;
+    background-color: rgba(255,255,255,0.05) !important;
+}
