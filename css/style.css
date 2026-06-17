@@ -19564,3 +19564,6 @@ html, body { overflow-x: hidden !important; max-width: 100%; }
 
 
 
+
+.team-block .inner-block .images-box .image img { height: 380px; object-fit: cover; object-position: top; width: 100%; }
+
