@@ -19553,10 +19553,13 @@ Sidebar
 }
 
 
-/* Upgrade Main Menu Text: Bigger and Bolder */
+/* Upgrade Main Menu Text: Bigger and Bolder (Adjusted to fit on one line) */
 .main-header .main-menu .navigation > li > a {
-    font-size: 18px !important;
+    font-size: 16px !important;
     font-weight: 700 !important;
+}
+.main-header .main-menu .navigation > li {
+    margin: 0 8px !important;
 }
 
 /* Fix double scrollbars */
