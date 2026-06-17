@@ -409,7 +409,7 @@ var THEMEMASCOT = {};
 	if ($('.team-h1-slider').length) {
 		var swiper = new Swiper(".team-h1-slider", {
 			speed:1000,
-			autoplay: true,
+			autoplay: false,
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
@@ -441,7 +441,7 @@ var THEMEMASCOT = {};
 	if ($('.team-h3-slider').length) {
 		var swiper = new Swiper(".team-h3-slider", {
 			speed:1000,
-			autoplay: true,
+			autoplay: false,
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
