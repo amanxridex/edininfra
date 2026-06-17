@@ -19555,29 +19555,14 @@ Sidebar
 
 /* Upgrade Main Menu Text: Bigger and Bolder (Adjusted to fit on one line) */
 .main-header .main-menu .navigation > li > a {
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: 700 !important;
 }
 .main-header .main-menu .navigation > li {
-    margin: 0 8px !important;
+    margin: 0 6px !important;
 }
 
-/* Fix double scrollbars */
-html {
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    height: auto !important;
-}
-body {
-    overflow-y: visible !important;
-    overflow-x: hidden !important;
-    height: auto !important;
-}
-.page-wrapper {
-    overflow-y: visible !important;
-    height: auto !important;
-}
-
+/* Removed double scrollbar overrides causing issues with smooth scroll */
 
 
 
@@ -19594,32 +19579,15 @@ body {
 .client-section .swiper-wrapper { justify-content: center; }
 
 
-/* Center Navigation in headers */
-.header-style-two .header-lower .inner-container .main-box {
-    justify-content: space-between;
-}
-.header-style-two .header-lower .inner-container .main-box .left-box {
-    gap: 0 !important;
-    flex: 1;
-}
-.header-style-two .header-lower .inner-container .main-box .left-box .nav-outer {
-    margin: 0 auto;
-}
-.header-style-two .header-lower .inner-container .main-box .right-box {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-.header-style-one .header-lower .inner-container .main-box .nav-outer {
-    margin: 0 auto;
-}
 
-/* Highlight MD card */
+
+/* Center Navigation in headers */
 .team-block.featured .inner-block {
     border: 3px solid var(--theme-color1) !important;
     box-shadow: 0 15px 35px rgba(200, 160, 50, 0.25) !important;
     position: relative;
 }
+
 .team-block.featured .inner-block::after {
     content: 'MANAGING DIRECTOR';
     position: absolute;
@@ -19636,3 +19604,4 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     font-family: 'Inter', sans-serif;
 }
+
