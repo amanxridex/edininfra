@@ -104,6 +104,13 @@
 .preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }
 </style>
 
+<script>
+  if (sessionStorage.getItem('splashShown')) {
+    document.write('<style>.custom-splash { display: none !important; }</style>');
+  } else {
+    sessionStorage.setItem('splashShown', 'true');
+  }
+</script>
 </head>
 <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
 <div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
