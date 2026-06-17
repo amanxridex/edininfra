@@ -427,7 +427,7 @@ var THEMEMASCOT = {};
 					slidesPerView: 3,
 				},
 				1400: {
-					slidesPerView: 4,
+					slidesPerView: 5,
 				},
 			},
 			// Navigation arrows
@@ -459,7 +459,7 @@ var THEMEMASCOT = {};
 					slidesPerView: 3,
 				},
 				1400: {
-					slidesPerView: 4,
+					slidesPerView: 5,
 				},
 			},
 			// Navigation arrows
