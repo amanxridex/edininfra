@@ -19561,15 +19561,18 @@ Sidebar
 
 /* Fix double scrollbars */
 html {
-    overflow-y: scroll;
+    overflow-y: auto !important;
     overflow-x: hidden !important;
+    height: auto !important;
 }
 body {
     overflow-y: visible !important;
     overflow-x: hidden !important;
+    height: auto !important;
 }
 .page-wrapper {
     overflow-y: visible !important;
+    height: auto !important;
 }
 
 
