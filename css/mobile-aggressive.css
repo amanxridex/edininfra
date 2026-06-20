@@ -172,3 +172,11 @@ html, body {
     bottom: 20px !important;
     z-index: 10 !important;
 }
+
+/* Project Block Spacing */
+.project-section .project-block {
+    margin-bottom: 50px !important;
+}
+.project-section .project-block:last-child {
+    margin-bottom: 0 !important;
+}
