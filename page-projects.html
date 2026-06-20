@@ -408,7 +408,7 @@
             <!-- Type Filter -->
             <div class="filter-group d-flex align-items-center me-4 mb-3 mb-lg-0">
               <span class="filter-label me-2" style="color: #ffffff; font-weight: 600; font-size: 15px; white-space: nowrap;"><i class="fa-solid fa-building" style="color: #c8a032;"></i> Type</span>
-              <select class="custom-select form-select border-0">
+              <select id="filter-type" class="custom-select form-select border-0">
                 <option value="all">All Types</option>
                 <option value="flats">Flats</option>
                 <option value="villa">Villa</option>
@@ -425,7 +425,7 @@
             <!-- City Filter -->
             <div class="filter-group d-flex align-items-center me-4 mb-3 mb-lg-0">
               <span class="filter-label me-2" style="color: #ffffff; font-weight: 600; font-size: 15px; white-space: nowrap;"><i class="fa-solid fa-map-location-dot" style="color: #c8a032;"></i> City</span>
-              <select class="custom-select form-select border-0">
+              <select id="filter-city" class="custom-select form-select border-0">
                 <option value="all">All Locations</option>
                 <option value="hill-estate">Hill Estate Area</option>
                 <option value="vrindavan">Vrindavan</option>
@@ -436,13 +436,18 @@
                 <option value="ayodhya">Ayodhya</option>
                 <option value="jewar">Jewar</option>
                 <option value="noida">Noida</option>
+                <option value="khair">Khair - Somna Road</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="miami">Miami</option>
+                <option value="paris">Paris</option>
+                <option value="london">London</option>
               </select>
             </div>
 
             <!-- Sort By Filter -->
             <div class="filter-group d-flex align-items-center me-4 mb-3 mb-lg-0">
               <span class="filter-label me-2" style="color: #ffffff; font-weight: 600; font-size: 15px; white-space: nowrap;"><i class="fa-solid fa-arrow-down-short-wide" style="color: #c8a032;"></i> Sort</span>
-              <select class="custom-select form-select border-0">
+              <select id="filter-sort" class="custom-select form-select border-0">
                 <option value="default">Featured</option>
                 <option value="price-asc">Price: Low to High</option>
                 <option value="price-desc">Price: High to Low</option>
@@ -451,14 +456,14 @@
 
             <!-- Action Button -->
             <div class="filter-action ms-auto mb-3 mb-lg-0">
-              <button style="background-color: #c8a032; color: #ffffff; padding: 12px 30px; border-radius: 30px; border: none; font-weight: 600; font-size: 15px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(200,160,50,0.3); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-magnifying-glass"></i> Search Projects</button>
+              <button id="search-projects-btn" style="background-color: #c8a032; color: #ffffff; padding: 12px 30px; border-radius: 30px; border: none; font-weight: 600; font-size: 15px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(200,160,50,0.3); display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-magnifying-glass"></i> Search Projects</button>
             </div>
           </div>
         </div>
         <!-- End Filter Bar -->
 
         <div class="row gx-3">
-          <div class="col-md-6">
+          <div class="col-md-6 project-item" data-type="plots" data-city="khair">
             <div class="project-box1 wow fadeInUp" data-wow-delay=".05s">
               <div class="inner-box">
                 <div class="thumb">
@@ -692,4 +697,47 @@
 
 
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterBtn = document.getElementById('search-projects-btn');
+    if (!filterBtn) return;
+
+    filterBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const selectedType = document.getElementById('filter-type').value;
+      const selectedCity = document.getElementById('filter-city').value;
+      const selectedSort = document.getElementById('filter-sort').value; // Implement later if needed
+
+      const projects = document.querySelectorAll('.project-item');
+      
+      let visibleCount = 0;
+
+      projects.forEach(project => {
+        const pType = project.getAttribute('data-type');
+        const pCity = project.getAttribute('data-city');
+        
+        let show = true;
+        
+        if (selectedType !== 'all' && pType !== selectedType) {
+          show = false;
+        }
+        
+        if (selectedCity !== 'all' && pCity !== selectedCity) {
+          show = false;
+        }
+
+        if (show) {
+          project.style.display = 'block';
+          visibleCount++;
+        } else {
+          project.style.display = 'none';
+        }
+      });
+      
+      // Optional: Show "No projects found" message if visibleCount === 0
+    });
+  });
+</script>
 </body><!-- Mirrored from html.kodesolution.com/2026/EDFratech-html/page-projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jun 2026 10:30:45 GMT --></html>
