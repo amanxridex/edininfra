@@ -395,13 +395,7 @@
 								<li style="font-weight: 500; color: #444;"><i class="fa fa-check-circle me-2" style="color: #c8a032; font-size: 18px;"></i> Easy Access to Local Markets</li>
 							</ul>
 
-							<h4 class="mb-4" style="color: #0D3B66; font-weight: 700;">Project Video Tour</h4>
-							<div class="video-box mb-5" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #000;">
-								<video width="100%" controls style="display: block;">
-									<source src="images/resource/VIHAAN.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							</div>
+
 						</div>
 					</div>
 					<div class="col-xl-4 col-lg-4">
@@ -409,6 +403,26 @@
 							<div class="project-details__details-box" style="background: linear-gradient(135deg, #0D3B66 0%, #082544 100%); border-radius: 15px; padding: 40px 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);">
 								<div class="project-details__bg-shape"> </div>
 								<h4 style="color: #fff; margin-bottom: 25px; font-size: 24px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">Project Overview</h4>
+								<button class="glowing-video-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
+									<i class="fa fa-play-circle"></i> View Video Tour
+								</button>
+								<style>
+								.glowing-video-btn {
+									display: flex; align-items: center; justify-content: center; width: 100%;
+									padding: 15px 20px; margin-bottom: 25px;
+									background: linear-gradient(90deg, #c8a032, #f3c951, #c8a032);
+									background-size: 200% auto;
+									color: #fff; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+									border: none; border-radius: 10px; cursor: pointer;
+									animation: glowGradient 3s infinite linear, glowPulse 2s infinite alternate;
+									box-shadow: 0 0 15px rgba(200, 160, 50, 0.6);
+									transition: transform 0.3s ease;
+								}
+								.glowing-video-btn:hover { transform: scale(1.03); color: #fff; }
+								.glowing-video-btn i { font-size: 22px; margin-right: 10px; }
+								@keyframes glowGradient { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+								@keyframes glowPulse { 0% { box-shadow: 0 0 10px rgba(200, 160, 50, 0.4); } 100% { box-shadow: 0 0 25px rgba(200, 160, 50, 0.8); } }
+								</style>
 								<ul class="list-unstyled project-details__details-list">
 									<li style="margin-bottom: 20px;">
 										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Developer</p>
@@ -677,6 +691,42 @@
 
 
   </div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" style="z-index: 999999;">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="background: transparent; border: none;">
+      <div class="modal-header" style="border-bottom: none; padding-bottom: 10px;">
+        <h5 class="modal-title" id="videoModalLabel" style="color: #fff; font-size: 24px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Vihaan Enclave</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);"></button>
+      </div>
+      <div class="modal-body" style="padding: 0 10px 10px 10px;">
+        <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); background: #000;">
+            <video id="vihaanVideoPlayer" width="100%" controls>
+                <source src="images/resource/VIHAAN.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var videoModal = document.getElementById('videoModal');
+        var vihaanVideoPlayer = document.getElementById('vihaanVideoPlayer');
+        if(videoModal && vihaanVideoPlayer) {
+            videoModal.addEventListener('hidden.bs.modal', function () {
+                vihaanVideoPlayer.pause();
+            });
+            videoModal.addEventListener('shown.bs.modal', function () {
+                vihaanVideoPlayer.play();
+            });
+        }
+    });
+</script>
+
 <!-- End Page Wrapper -->
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
