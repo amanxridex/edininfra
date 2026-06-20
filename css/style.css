@@ -5550,11 +5550,11 @@ Section Title
 }
 .banner-section .outer-box {
   position: relative;
-  max-width: 1856px;
+  max-width: 1870px;
   margin: 0 auto;
   border-radius: 30px;
   overflow: hidden;
-  aspect-ratio: 1856 / 1024;
+  aspect-ratio: 1870 / 841;
 }
 .banner-section .outer-box .swiper-container,
 .banner-section .outer-box .swiper-wrapper,
