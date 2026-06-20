@@ -19631,3 +19631,8 @@ Sidebar
 .client-h2-slider .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+/* Fix horizontal scroll */
+html, body { overflow-x: hidden !important; width: 100%; }
+.page-wrapper { overflow-x: hidden !important; width: 100%; }
+
