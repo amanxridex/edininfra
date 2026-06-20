@@ -332,14 +332,57 @@
     <section class="project-section-two">
       <div class="auto-container">
         
+        
+        <style>
+          .project-filter-bar .select2-container {
+              min-width: 170px;
+          }
+          .project-filter-bar .select2-selection--single {
+              background-color: #f8f9fa !important;
+              border-radius: 20px !important;
+              border: none !important;
+              height: 46px !important;
+              display: flex !important;
+              align-items: center !important;
+              padding-left: 15px !important;
+              box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+          }
+          .project-filter-bar .select2-selection__rendered {
+              color: #444 !important;
+              font-weight: 500;
+              font-size: 14px;
+          }
+          .project-filter-bar .select2-selection__arrow {
+              height: 46px !important;
+              right: 10px !important;
+          }
+          .select2-dropdown {
+              border-radius: 15px !important;
+              border: none !important;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+              overflow: hidden;
+              padding: 10px 0;
+          }
+          .select2-results__option {
+              padding: 8px 20px !important;
+              font-size: 14px;
+              transition: all 0.2s ease;
+          }
+          .select2-results__option--highlighted {
+              background-color: #f8f9fa !important;
+              color: #0D3B66 !important;
+              font-weight: 600;
+          }
+        </style>
         <!-- Filter Bar -->
+
         <div class="project-filter-bar mb-5 wow fadeInUp" data-wow-delay=".1s">
           <div class="filter-inner d-flex flex-wrap align-items-center" style="background: linear-gradient(135deg, #0D3B66 0%, #082544 100%); padding: 20px 30px; border-radius: 50px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);">
             
             <!-- Type Filter -->
             <div class="filter-group d-flex align-items-center me-4 mb-3 mb-lg-0">
               <span class="filter-label me-2" style="color: #ffffff; font-weight: 600; font-size: 15px; white-space: nowrap;"><i class="fa-solid fa-building" style="color: #c8a032;"></i> Type</span>
-              <select class="form-select border-0" style="background-color: #f8f9fa; border-radius: 20px; font-weight: 500; cursor: pointer; color: #444; box-shadow: none; min-width: 160px; padding: 10px 35px 10px 20px;">
+              <select class="custom-select form-select border-0">
                 <option value="all">All Types</option>
                 <option value="flats">Flats</option>
                 <option value="villa">Villa</option>
@@ -356,7 +399,7 @@
             <!-- City Filter -->
             <div class="filter-group d-flex align-items-center me-4 mb-3 mb-lg-0">
               <span class="filter-label me-2" style="color: #ffffff; font-weight: 600; font-size: 15px; white-space: nowrap;"><i class="fa-solid fa-map-location-dot" style="color: #c8a032;"></i> City</span>
-              <select class="form-select border-0" style="background-color: #f8f9fa; border-radius: 20px; font-weight: 500; cursor: pointer; color: #444; box-shadow: none; min-width: 170px; padding: 10px 35px 10px 20px;">
+              <select class="custom-select form-select border-0">
                 <option value="all">All Locations</option>
                 <option value="hill-estate">Hill Estate Area</option>
                 <option value="vrindavan">Vrindavan</option>
@@ -373,7 +416,7 @@
             <!-- Sort By Filter -->
             <div class="filter-group d-flex align-items-center me-4 mb-3 mb-lg-0">
               <span class="filter-label me-2" style="color: #ffffff; font-weight: 600; font-size: 15px; white-space: nowrap;"><i class="fa-solid fa-arrow-down-short-wide" style="color: #c8a032;"></i> Sort</span>
-              <select class="form-select border-0" style="background-color: #f8f9fa; border-radius: 20px; font-weight: 500; cursor: pointer; color: #444; box-shadow: none; min-width: 180px; padding: 10px 35px 10px 20px;">
+              <select class="custom-select form-select border-0">
                 <option value="default">Featured</option>
                 <option value="price-asc">Price: Low to High</option>
                 <option value="price-desc">Price: High to Low</option>
