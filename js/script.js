@@ -318,30 +318,20 @@ var THEMEMASCOT = {};
 
 	if ($('.client-h2-slider').length) {
 		var swiper = new Swiper(".client-h2-slider", {
-			speed:1000,
-			autoplay: true,
+			speed: 3000,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+			},
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
 			breakpoints: {
-				420: {
-					slidesPerView: 2,
-				},
-				576: {
-					slidesPerView: 3,
-				},
-				768: {
-					slidesPerView: 4,
-				},
-				1200: {
-					slidesPerView: 5,
-				},
-			},
-			// Navigation arrows
-			navigation: {
-				nextEl: '.slider-next',
-				prevEl: '.slider-prev',
-			},
+				420: { slidesPerView: 2 },
+				576: { slidesPerView: 3 },
+				768: { slidesPerView: 4 },
+				1200: { slidesPerView: 5 },
+			}
 		});
 	}
 
