@@ -332,8 +332,35 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
-					<div class="project-details__top mb-30">
-						<div class="project-details__img"> <img src="images/resource/project-details.jpg" alt=""> </div>
+										<div class="project-details__top mb-30">
+						<!-- Swiper Slider for Hero Image -->
+						<div class="swiper project-details-hero-slider" style="border-radius: 15px; overflow: hidden; position: relative;">
+							<div class="swiper-wrapper">
+								<!-- Slide 1 -->
+								<div class="swiper-slide">
+									<div class="project-details__img"> 
+										<img src="images/resource/project-details.jpg" alt="Project Image 1" style="width: 100%; object-fit: cover;"> 
+									</div>
+								</div>
+								<!-- Slide 2 -->
+								<div class="swiper-slide">
+									<div class="project-details__img"> 
+										<img src="images/resource/project1-2.jpg" alt="Project Image 2" style="width: 100%; object-fit: cover;"> 
+									</div>
+								</div>
+								<!-- Slide 3 -->
+								<div class="swiper-slide">
+									<div class="project-details__img"> 
+										<img src="images/resource/project1-3.jpg" alt="Project Image 3" style="width: 100%; object-fit: cover;"> 
+									</div>
+								</div>
+							</div>
+							<!-- Navigation Arrows -->
+							<div class="swiper-button-next" style="color: #c8a032;"></div>
+							<div class="swiper-button-prev" style="color: #c8a032;"></div>
+							<!-- Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -599,4 +626,30 @@
 
 
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if(typeof Swiper !== 'undefined') {
+        new Swiper('.project-details-hero-slider', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.project-details-hero-slider .swiper-button-next',
+                prevEl: '.project-details-hero-slider .swiper-button-prev',
+            },
+            pagination: {
+                el: '.project-details-hero-slider .swiper-pagination',
+                clickable: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+    }
+});
+</script>
 </body><!-- Mirrored from html.kodesolution.com/2026/EDFratech-html/page-project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jun 2026 10:30:45 GMT --></html>
