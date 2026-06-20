@@ -5556,6 +5556,11 @@ Section Title
   overflow: hidden;
   aspect-ratio: 1856 / 1024;
 }
+.banner-section .outer-box .swiper-container,
+.banner-section .outer-box .swiper-wrapper,
+.banner-section .outer-box .banner-block {
+  height: 100%;
+}
 .banner-section .outer-box .banner-block .inner-block {
   position: relative;
   width: 100%;
