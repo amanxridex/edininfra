@@ -17021,8 +17021,8 @@ Page Title
   position: absolute;
   right: 0;
   top: 0;
-  background: #000000;
-  opacity: 0.6;
+  background: transparent;
+  opacity: 0;
 }
 .page-title .title {
   font-size: 75px;
