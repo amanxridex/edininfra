@@ -113,7 +113,32 @@
 
 /* Hide default preloader */
 .preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }
-</style>
+
+          @media(max-width: 991px) {
+              .filter-inner {
+                  border-radius: 20px !important;
+                  padding: 20px !important;
+                  flex-direction: column !important;
+                  align-items: stretch !important;
+              }
+              .filter-group {
+                  margin-right: 0 !important;
+                  margin-bottom: 15px !important;
+                  flex-direction: column !important;
+                  align-items: stretch !important;
+              }
+              .filter-label {
+                  margin-bottom: 5px !important;
+              }
+              .project-filter-bar .select2-container {
+                  width: 100% !important;
+              }
+              .filter-action button {
+                  width: 100% !important;
+                  justify-content: center;
+              }
+          }
+        </style>
 
 <script>
   if (sessionStorage.getItem('splashShown')) {
@@ -122,6 +147,7 @@
     sessionStorage.setItem('splashShown', 'true');
   }
 </script>
+  <link rel="stylesheet" href="css/mobile-aggressive.css">
 </head>
 
 <body>
