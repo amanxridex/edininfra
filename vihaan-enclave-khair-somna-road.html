@@ -435,22 +435,51 @@
 								<button class="glowing-video-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
 									<i class="fa fa-play-circle"></i> View Video Tour
 								</button>
+								<a href="Vihaan_Enclave_Rough_Layout.pdf" target="_blank" class="glowing-sitemap-btn" style="text-decoration: none;">
+									<i class="fa fa-map"></i> View Sitemap
+								</a>
+								<a href="https://www.google.com/maps/place/27%C2%B058'50.2%22N+77%C2%B052'59.0%22E/@27.9806194,77.8804894,769m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d27.9806194!4d77.8830643?hl=en&entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="glowing-location-btn" style="text-decoration: none;">
+									<i class="fa fa-map-marker-alt"></i> View Site Location
+								</a>
 								<style>
-								.glowing-video-btn {
+								.glowing-video-btn, .glowing-sitemap-btn, .glowing-location-btn {
 									display: flex; align-items: center; justify-content: center; width: 100%;
-									padding: 15px 20px; margin-bottom: 25px;
-									background: linear-gradient(90deg, #c8a032, #f3c951, #c8a032);
+									padding: 15px 20px; margin-bottom: 15px;
 									background-size: 200% auto;
 									color: #fff; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
 									border: none; border-radius: 10px; cursor: pointer;
-									animation: glowGradient 3s infinite linear, glowPulse 2s infinite alternate;
-									box-shadow: 0 0 15px rgba(200, 160, 50, 0.6);
 									transition: transform 0.3s ease;
 								}
-								.glowing-video-btn:hover { transform: scale(1.03); color: #fff; }
-								.glowing-video-btn i { font-size: 22px; margin-right: 10px; }
-								@keyframes glowGradient { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-								@keyframes glowPulse { 0% { box-shadow: 0 0 10px rgba(200, 160, 50, 0.4); } 100% { box-shadow: 0 0 25px rgba(200, 160, 50, 0.8); } }
+								.glowing-location-btn { margin-bottom: 25px; } /* Last button gets more bottom margin */
+								.glowing-video-btn:hover, .glowing-sitemap-btn:hover, .glowing-location-btn:hover { transform: scale(1.03); color: #fff; }
+								.glowing-video-btn i, .glowing-sitemap-btn i, .glowing-location-btn i { font-size: 22px; margin-right: 10px; }
+								
+								/* Video Tour (Gold) */
+								.glowing-video-btn {
+									background-image: linear-gradient(90deg, #c8a032, #f3c951, #c8a032);
+									animation: glowGradientVideo 3s infinite linear, glowPulseVideo 2s infinite alternate;
+									box-shadow: 0 0 15px rgba(200, 160, 50, 0.6);
+								}
+								@keyframes glowGradientVideo { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+								@keyframes glowPulseVideo { 0% { box-shadow: 0 0 10px rgba(200, 160, 50, 0.4); } 100% { box-shadow: 0 0 25px rgba(200, 160, 50, 0.8); } }
+
+								/* Sitemap (Emerald Green) */
+								.glowing-sitemap-btn {
+									background-image: linear-gradient(90deg, #10b981, #34d399, #10b981);
+									animation: glowGradientSitemap 3s infinite linear, glowPulseSitemap 2s infinite alternate;
+									box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+								}
+								@keyframes glowGradientSitemap { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+								@keyframes glowPulseSitemap { 0% { box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); } 100% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.8); } }
+
+								/* Location (Crimson Red) */
+								.glowing-location-btn {
+									background-image: linear-gradient(90deg, #e11d48, #fb7185, #e11d48);
+									animation: glowGradientLocation 3s infinite linear, glowPulseLocation 2s infinite alternate;
+									box-shadow: 0 0 15px rgba(225, 29, 72, 0.6);
+								}
+								@keyframes glowGradientLocation { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+								@keyframes glowPulseLocation { 0% { box-shadow: 0 0 10px rgba(225, 29, 72, 0.4); } 100% { box-shadow: 0 0 25px rgba(225, 29, 72, 0.8); } }
 								</style>
 								<ul class="list-unstyled project-details__details-list">
 									<li style="margin-bottom: 20px;">
