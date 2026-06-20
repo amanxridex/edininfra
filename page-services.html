@@ -122,6 +122,88 @@
     sessionStorage.setItem('splashShown', 'true');
   }
 </script>
+
+<style>
+/* Flip Card CSS */
+.service-block-two .inner-block {
+    background-color: transparent;
+    perspective: 1000px; 
+    height: 100%;
+}
+
+.service-block-two .inner-block-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.service-block-two .inner-block:hover .inner-block-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.service-block-two .flip-front, .service-block-two .flip-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-block-two .flip-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #0D3B66 0%, #082544 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: left;
+}
+
+.service-block-two .flip-back .h4 {
+    color: #c8a032;
+    margin-bottom: 15px;
+}
+
+.service-block-two .flip-back p {
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-block-two .flip-back ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-block-two .flip-back ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+.service-block-two .flip-back ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #c8a032;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
@@ -332,7 +414,9 @@
         <div class="row gx-3 gy-4">
           <!-- Service Block 1 -->
           <div class="col-xl-4 col-md-6 service-block-two wow fadeInUp" data-wow-delay="200ms">
-            <div class="inner-block">
+            <div class="inner-block-flip-inner">
+<div class="flip-front">
+
               <div class="content">
                 <div class="icon-box">
                   <div class="icon"><i class="flaticon-set-residential"></i></div>
@@ -345,12 +429,26 @@
                 <a class="btn-icon-style" href="page-construction-management.html"><i class="fa-solid fa-arrow-right"></i></a>
                 <div class="image"><img src="images/resource/service2-1.jpg" alt=""></div>
               </div>
+</div>
+<div class="flip-back">
+<div class="h4">Construction Management</div>
+<p>We take full ownership of the construction process, ensuring seamless execution from blueprint to handover.</p>
+<ul>
+<li>End-to-End Supervision</li>
+<li>Cost Management</li>
+<li>Quality Control</li>
+<li>Timely Delivery</li>
+</ul>
+</div>
+</div>
             </div>
           </div>
 
           <!-- Service Block 2 -->
           <div class="col-xl-4 col-md-6 service-block-two wow fadeInUp" data-wow-delay="400ms">
-            <div class="inner-block">
+            <div class="inner-block-flip-inner">
+<div class="flip-front">
+
               <div class="content">
                 <div class="icon-box">
                   <div class="icon"><i class="flaticon-set-accomodation"></i></div>
@@ -363,12 +461,26 @@
                 <a class="btn-icon-style" href="page-architecture-design.html"><i class="fa-solid fa-arrow-right"></i></a>
                 <div class="image"><img src="images/resource/service2-2.jpg" alt=""></div>
               </div>
+</div>
+<div class="flip-back">
+<div class="h4">Architecture & Design</div>
+<p>Our architectural team creates visionary designs that blend aesthetics with functionality and sustainability.</p>
+<ul>
+<li>Master Planning</li>
+<li>Interior Design</li>
+<li>Sustainable Arch</li>
+<li>3D Visualization</li>
+</ul>
+</div>
+</div>
             </div>
           </div>
 
           <!-- Service Block 3 -->
           <div class="col-xl-4 col-md-6 service-block-two wow fadeInUp" data-wow-delay="600ms">
-            <div class="inner-block">
+            <div class="inner-block-flip-inner">
+<div class="flip-front">
+
               <div class="content">
                 <div class="icon-box">
                   <div class="icon"><i class="flaticon-set-blueprint"></i></div>
@@ -381,12 +493,26 @@
                 <a class="btn-icon-style" href="page-investment-capital.html"><i class="fa-solid fa-arrow-right"></i></a>
                 <div class="image"><img src="images/resource/service2-3.jpg" alt=""></div>
               </div>
+</div>
+<div class="flip-back">
+<div class="h4">Investment & Capital</div>
+<p>We provide strategic capital allocation and real estate investment advisory for maximum ROI.</p>
+<ul>
+<li>Portfolio Optimization</li>
+<li>Risk Mitigation</li>
+<li>High-Yield Investments</li>
+<li>Market Analysis</li>
+</ul>
+</div>
+</div>
             </div>
           </div>
 
           <!-- Service Block 4 -->
           <div class="col-xl-4 col-md-6 service-block-two wow fadeInUp" data-wow-delay="200ms">
-            <div class="inner-block">
+            <div class="inner-block-flip-inner">
+<div class="flip-front">
+
               <div class="content">
                 <div class="icon-box">
                   <div class="icon"><i class="flaticon-set-investment"></i></div>
@@ -399,12 +525,26 @@
                 <a class="btn-icon-style" href="page-projects-management.html"><i class="fa-solid fa-arrow-right"></i></a>
                 <div class="image"><img src="images/resource/service2-5.jpg" alt=""></div>
               </div>
+</div>
+<div class="flip-back">
+<div class="h4">Projects Management</div>
+<p>Dedicated project managers ensure all stakeholders are aligned, mitigating risks and delays.</p>
+<ul>
+<li>Vendor Coordination</li>
+<li>Risk Management</li>
+<li>Compliance & Safety</li>
+<li>Resource Allocation</li>
+</ul>
+</div>
+</div>
             </div>
           </div>
 
           <!-- Service Block 5 -->
           <div class="col-xl-4 col-md-6 service-block-two wow fadeInUp" data-wow-delay="400ms">
-            <div class="inner-block">
+            <div class="inner-block-flip-inner">
+<div class="flip-front">
+
               <div class="content">
                 <div class="icon-box">
                   <div class="icon"><i class="flaticon-set-building-2"></i></div>
@@ -417,12 +557,26 @@
                 <a class="btn-icon-style" href="page-gated-community.html"><i class="fa-solid fa-arrow-right"></i></a>
                 <div class="image"><img src="images/resource/service2-5.jpg" alt=""></div>
               </div>
+</div>
+<div class="flip-back">
+<div class="h4">Gated Community Noida</div>
+<p>Building premium gated communities with world-class amenities and unparalleled security in Noida.</p>
+<ul>
+<li>Prime Locations</li>
+<li>Smart Homes</li>
+<li>Clubhouse Facilities</li>
+<li>24/7 Security</li>
+</ul>
+</div>
+</div>
             </div>
           </div>
 
           <!-- Service Block 6 -->
           <div class="col-xl-4 col-md-6 service-block-two wow fadeInUp" data-wow-delay="600ms">
-            <div class="inner-block">
+            <div class="inner-block-flip-inner">
+<div class="flip-front">
+
               <div class="content">
                 <div class="icon-box">
                   <div class="icon"><i class="flaticon-set-pencil-and-ruler"></i></div>
@@ -435,6 +589,18 @@
                 <a class="btn-icon-style" href="page-contact.html"><i class="fa-solid fa-arrow-right"></i></a>
                 <div class="image"><img src="images/resource/service2-5.jpg" alt=""></div>
               </div>
+</div>
+<div class="flip-back">
+<div class="h4">Legal Services</div>
+<p>Expert legal assistance for property acquisition, ensuring a smooth and compliant transaction process.</p>
+<ul>
+<li>Title Verification</li>
+<li>RERA Compliance</li>
+<li>Contract Drafting</li>
+<li>Dispute Resolution</li>
+</ul>
+</div>
+</div>
             </div>
           </div>
         </div>
