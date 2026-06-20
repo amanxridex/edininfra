@@ -730,13 +730,13 @@
       const selectedCity = document.getElementById('filter-city').value;
       const selectedSort = document.getElementById('filter-sort').value; // Implement later if needed
 
-      const projects = document.querySelectorAll('.project-item');
+      const projects = document.querySelectorAll('.project-section-two .row .col-md-6');
       
       let visibleCount = 0;
 
       projects.forEach(project => {
-        const pType = project.getAttribute('data-type');
-        const pCity = project.getAttribute('data-city');
+        const pType = project.getAttribute('data-type') || 'flats'; // Default to flats if not set
+        const pCity = project.getAttribute('data-city') || 'other'; // Default to other if not set
         
         let show = true;
         
