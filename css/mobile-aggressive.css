@@ -58,6 +58,33 @@ html, body {
     .modal-content {
         border-radius: 15px !important;
     }
+
+    /* Splash Screen Mobile Fixes */
+    .splash-logo {
+        width: 80% !important;
+        max-width: 300px !important;
+    }
+    
+    .splash-text {
+        font-size: 16px !important;
+        letter-spacing: 4px !important;
+        animation: textSlideUpMobile 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards !important;
+        white-space: nowrap !important;
+    }
+    
+    .splash-accent-line {
+        animation: lineExpandMobile 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards !important;
+    }
+}
+
+@keyframes textSlideUpMobile {
+    0% { opacity: 0; transform: translateY(150%); letter-spacing: 2px; }
+    100% { opacity: 1; transform: translateY(0); letter-spacing: 8px; }
+}
+
+@keyframes lineExpandMobile {
+    0% { width: 0px; opacity: 0; }
+    100% { width: 200px; opacity: 1; }
 }
 
 @media (max-width: 575.98px) {
