@@ -5550,14 +5550,17 @@ Section Title
 }
 .banner-section .outer-box {
   position: relative;
-  max-width: 1840px;
+  max-width: 1856px;
   margin: 0 auto;
   border-radius: 30px;
   overflow: hidden;
+  aspect-ratio: 1856 / 1024;
 }
 .banner-section .outer-box .banner-block .inner-block {
   position: relative;
-  padding: 200px 0 90px 90px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
   overflow: hidden;
 }
 @media (max-width: 1599.98px) {
@@ -5588,8 +5591,7 @@ Section Title
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: growInfinite 100s linear infinite;
-          animation: growInfinite 100s linear infinite;
+  animation: none;
 }
 .banner-section .outer-box .banner-block .inner-block .bg-image:before {
   position: absolute;
