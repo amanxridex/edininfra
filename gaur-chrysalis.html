@@ -1,857 +1,203 @@
-<!DOCTYPE html><html lang="en"><!-- Mirrored from html.kodesolution.com/2026/EDFratech-html/page-project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jun 2026 10:30:45 GMT --><head>
-  <meta charset="utf-8">
-  <title>Gaur Chrysalis | Premium Flats in Yamuna Expressway | Gaurs Group</title>
-  <meta name="keywords" content="Gaur Chrysalis Dankaur, Gaur Chrysalis Sector 17A, Plots Near Galgotias University, Premium Flats & Apartments in Dankaur, Plot Investment in Greater Noida, Land Near Yamuna Expressway, Gaurs Group Projects, Affordable Plots in Greater Noida, Dankaur Property Investment, Premium Flats & Apartments Near Galgotias University">
-<meta name="description" content="Book your plot in Gaur Chrysalis, Sector 17A Dankaur near Galgotias University. Premium residential plots starting at attractive prices with excellent connectivity and strong future appreciation potential.">
-  <!-- Stylesheets -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
-
-  <!-- Responsive -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<style>
-/* Ultra-Premium White Splash Screen */
-.custom-splash {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background: #ffffff; /* Clean white */
-    z-index: 999999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    perspective: 1000px;
-    animation: splashFadeOut 1s cubic-bezier(0.8, 0, 0.2, 1) 4.5s forwards;
-    overflow: hidden;
-}
-
-.custom-splash::before {
-    content: '';
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 200vw; height: 200vw;
-    background: radial-gradient(circle, rgba(200,160,50,0.06) 0%, transparent 60%);
-    transform: translate(-50%, -50%) scale(0.5);
-    animation: pulseAura 3s ease-in-out infinite;
-}
-
-.splash-logo {
-    width: 420px;
-    opacity: 0;
-    transform: translateY(60px) scale(0.8) rotateX(15deg);
-    filter: drop-shadow(0 25px 45px rgba(0,0,0,0.08));
-    animation: logoReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards, logoFloat 4s ease-in-out 1.7s infinite;
-    position: relative;
-    z-index: 2;
-}
-
-.splash-text-container {
-    overflow: hidden;
-    margin-top: 45px;
-    position: relative;
-    z-index: 2;
-}
-
-.splash-text {
-    color: #0D3B66; /* Deep blue for premium contrast on white */
-    font-family: 'Inter', sans-serif;
-    font-size: 27px;
-    font-weight: 700;
-    letter-spacing: 6px;
-    opacity: 0;
-    transform: translateY(150%);
-    animation: textSlideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
-    text-transform: uppercase;
-}
-
-.splash-text span {
-    color: #c8a032; /* Gold accent */
-}
-
-.splash-accent-line {
-    width: 0px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #c8a032, transparent);
-    margin-top: 30px;
-    animation: lineExpand 2.2s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
-    opacity: 0;
-}
-
-@keyframes pulseAura {
-    0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
-    50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
-}
-
-@keyframes logoReveal {
-    0% { opacity: 0; transform: translateY(60px) scale(0.8) rotateX(15deg); }
-    100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); }
-}
-
-@keyframes logoFloat {
-    0%, 100% { transform: translateY(0); filter: drop-shadow(0 25px 45px rgba(0,0,0,0.08)); }
-    50% { transform: translateY(-15px); filter: drop-shadow(0 35px 55px rgba(200,160,50,0.25)); }
-}
-
-@keyframes textSlideUp {
-    0% { opacity: 0; transform: translateY(150%); letter-spacing: 6px; }
-    100% { opacity: 1; transform: translateY(0); letter-spacing: 12px; }
-}
-
-@keyframes lineExpand {
-    0% { width: 0px; opacity: 0; }
-    100% { width: 300px; opacity: 1; }
-}
-
-@keyframes splashFadeOut {
-    0% { opacity: 1; transform: scale(1); filter: blur(0px); }
-    100% { opacity: 0; transform: scale(1.1); filter: blur(15px); visibility: hidden; }
-}
-
-/* Hide default preloader */
-.preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }
-
-			@media(max-width: 767px) {
-				.inquiry-form {
-					flex-direction: column !important;
-					align-items: stretch !important;
-				}
-				.inquiry-form h4 {
-					margin-bottom: 15px !important;
-					text-align: center;
-				}
-				.inquiry-form input, .inquiry-form button {
-					width: 100% !important;
-					min-width: 100% !important;
-					margin-bottom: 5px;
-				}
-				.inquiry-actions {
-					flex-direction: column !important;
-				}
-				.inquiry-actions a {
-					width: 100% !important;
-				}
-				.project-inquiry-bar {
-					padding: 20px 15px !important;
-				}
-				.project-details__details-box {
-					padding: 30px 20px !important;
-				}
-			}
-			</style>
-
-<script>
-  if (sessionStorage.getItem('splashShown')) {
-    document.write('<style>.custom-splash { display: none !important; }</style>');
-  } else {
-    sessionStorage.setItem('splashShown', 'true');
-  }
-</script>
-  <link rel="stylesheet" href="css/mobile-aggressive.css">
-
-<!-- Open Graph / SEO Meta Tags -->
-<meta property="og:title" content="Gaur Chrysalis | Premium Flats in Yamuna Expressway | Gaurs Group">
-<meta property="og:description" content="Book your plot in Gaur Chrysalis, Sector 17A Dankaur near Galgotias University. Premium residential plots starting at attractive prices with excellent connectivity and strong future appreciation potential.">
-<meta property="og:image" content="https://edinfratech.com/GAUR1.jpg">
-<meta property="og:url" content="https://edinfratech.com/friends-colony-dankaur-sector-17a.html">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gaur Chrysalis | Premium Flats in Yamuna Expressway | Gaurs Group">
-<meta name="twitter:description" content="Book your plot in Gaur Chrysalis, Sector 17A Dankaur near Galgotias University. Premium residential plots starting at attractive prices with excellent connectivity and strong future appreciation potential.">
-<meta name="twitter:image" content="https://edinfratech.com/GAUR1.jpg">
-
-<!-- SEO Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "Gaurs Group",
-  "image": "https://edinfratech.com/images/logo2.png",
-  "url": "https://edinfratech.com/",
-  "telephone": "+918368337869",
-  "email": "edinfratech6@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "GAURAVDEEP HEIGHTS, B-23A, Sector-62, Near Fortis Hospital",
-    "addressLocality": "Noida",
-    "addressRegion": "UP",
-    "addressCountry": "IN"
-  },
-  "description": "Gaurs Group is the leading real estate developer offering premium freehold plots, luxury villas, and commercial real estate in Noida, YEIDA Region, and Jewar Airport.",
-  "priceRange": "₹₹₹"
-}
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaur Chrysalis 2.0 | Yamuna Expressway</title>
+    <!-- Independent CSS strictly for this page -->
+    <link rel="stylesheet" href="css/gaur-chrysalis.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <div class="page-wrapper">
 
-    
-<div class="custom-splash">
-    <img src="images/logo.png" class="splash-logo" alt="Gaurs Group">
-    <div class="splash-accent-line"></div>
-    <div class="splash-text-container">
-        <div class="splash-text">Building <span>Visions</span></div>
-    </div>
-</div>
-
-<div class="preloader" style="display:none;"></div>
-
-    <!-- Back-to-top start -->
-    <div class="back-to-top-wrapper">
-      <button id="back_to_top" type="button" class="back-to-top-btn">
-        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-      </button>
-    </div>
-    <!-- Back-to-top start -->
-
-    <!-- Main Header-->
-    <header class="main-header header-style-two">
-      <div class="header-lower ">
-        <div class="inner-container">
-          <!-- Main box -->
-          <div class="main-box">
-            <div class="left-box">
-              <div class="logo-box">
-                <div class="logo one">
-                  <a href="index.html"><img src="images/logo3.png" alt="Logo"></a>
-                </div>
-                <div class="logo two">
-                  <a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
-                </div>
-              </div>
-              <!--Nav Box-->
-              <div class="nav-outer">
-                <nav class="nav main-menu">
-                  <ul class="navigation">
-                  <li class="current"><a href="index.html">Home</a></li>
-                    <li class="dropdown"><a href="page-about.html">About Us</a>
-                    <ul>
-                      <li><a href="page-about-our-company.html">About Our Company</a></li>
-                      <li><a href="mission-1.html">Our Mission</a></li>
-                      <li><a href="vision-1.html">Our Vision</a></li>
-                      <li><a href="page-our-core-values.html">Our Core Values</a></li>
-                      <li><a href="page-team.html">Our Team</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="page-projects.html">Projects</a></li>
-                  <li class="dropdown"><a href="page-services.html">Services</a>
-                    <ul>
-                      <li><a href="page-construction-management.html">Construction Management</a></li>
-                      <li><a href="page-architecture-design.html">Architecture &amp; Design</a></li>
-                      <li><a href="page-investment-capital.html">Investment &amp; Capital</a></li>
-                      <li><a href="page-projects-management.html">Projects Management</a></li>
-                      <li><a href="page-gated-community.html">Gated Community Noida</a></li>
-                      <li><a href="page-contact.html">Legal Services</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="page-investors.html">Investors</a></li>
-                  <li><a href="news-grid.html">News Updates</a></li>
-                </ul>
-              </nav>
-              </div>
-            </div>
-
-            <div class="right-box">
-              <a class="theme-btn btn-style-four" href="page-contact.html">
-                <span class="icon">
-                  <i class="fa-solid fa-arrow-right"></i>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
-                <span class="btn-title">Get In Touch</span>
-              </a>
-              <!--Mobile Navigation Toggler-->
-              <button class="mobile-nav-toggler">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
+    <!-- Transparent Sticky Header -->
+    <header class="gc-header">
+        <div class="gc-logo">
+            <h2><a href="index.html" style="text-decoration:none; color:inherit;">ED Infratech</a></h2>
         </div>
-      </div>
-
-      <!-- Mobile Menu  -->
-      <div class="mobile-menu">
-        <div class="menu-backdrop"></div>
-        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-        <nav class="menu-box">
-          <div class="upper-box">
-            <div class="nav-logo">
-              <a href="index.html"><img src="images/logo3.png" alt=""></a>
-            </div>
-            <div class="close-btn"><i class="icon fa fa-times"></i></div>
-          </div>
-          <ul class="navigation clearfix">
-            <!--Keep This Empty / Menu will come through Javascript-->
-          </ul>
-          <ul class="contact-list-one">
-            <li>
-              <i class="icon fa-regular fa-envelope"></i>
-              <span class="title">Send Email</span>
-              <div class="text"><a href="mailto:edinfratech6@gmail.com">edinfratech6@gmail.com</a></div>
-            </li>
-          </ul>
-          <ul class="social-links">
-            <li>
-              <a href="#"><i class="icon fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="icon fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="icon fab fa-pinterest-p"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="icon fab fa-vimeo-v"></i></a>
-            </li>
-          </ul>
+        <nav class="gc-nav">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#clubhouse">The Clubhouse</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
         </nav>
-      </div>
-      <!-- End Mobile Menu -->
-
-      <!-- Header Search -->
-      <div class="search-popup">
-        <span class="search-back-drop"></span>
-        <button class="close-search"><span class="fa fa-times"></span></button>
-
-        <div class="search-inner">
-          <form method="post" action="https://html.kodesolution.com/2026/EDFratech-html/index.html">
-            <div class="form-group">
-              <input type="search" name="search-field" value="" placeholder="Search..." required="">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- End Header Search -->
-
-      <!-- Sticky Header  -->
-      <div class="sticky-header">
-        <div class="auto-container">
-          <div class="inner-container">
-            <!--Logo-->
-            <div class="logo">
-              <a href="index.html"><img src="images/logo2.png" alt=""></a>
-            </div>
-
-            <!--Right Col-->
-            <div class="nav-outer">
-              <!-- Main Menu -->
-              <nav class="main-menu">
-                <div class="navbar-collapse show collapse clearfix">
-                  <ul class="navigation clearfix">
-                    <!--Keep This Empty / Menu will come through Javascript-->
-                  </ul>
-                </div>
-              </nav>
-              <!-- Main Menu End-->
-
-              <!--Mobile Navigation Toggler-->
-              <div class="mobile-nav-toggler">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            
-            <a href="tel:+91 836 833 7869" class="header-phone_box">
-              <span class="icon"><i aria-hidden="true" class="fas fa-phone-alt"></i></span>
-              <span class="info">
-                Call/WhatsApp
-                <strong>+91 836 833 7869</strong>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- End Sticky Menu -->
+        <a href="#contact" class="gc-btn">Enquire Now</a>
     </header>
-    <!--End Main Header -->
 
-
-
-	<!--Project Details Start-->
-	<section class="project-details pt-120">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-										<div class="project-details__top mb-30">
-						<!-- Swiper Slider for Hero Image -->
-						
-						<div class="swiper project-details-hero-slider" style="border-radius: 15px; overflow: hidden; position: relative; max-height: 500px;">
-							<div class="swiper-wrapper">
-								<!-- Slide 1 -->
-								<div class="swiper-slide">
-									<div class="project-details__img" style="height: 100%;"> 
-										<img src="GAUR1.jpg" alt="Gaur Chrysalis Banner" style="width: 100%; height: 500px; object-fit: cover;"> 
-									</div>
-								</div>
-								<!-- Slide 2 -->
-								<div class="swiper-slide">
-									<div class="project-details__img" style="height: 100%;"> 
-										<img src="GAUR2.avif" alt="Gaur Chrysalis Details" style="width: 100%; height: 500px; object-fit: cover;"> 
-									</div>
-								</div>
-							</div>
-							<!-- Navigation Arrows -->
-							<div class="swiper-button-next" style="color: #c8a032;"></div>
-							<div class="swiper-button-prev" style="color: #c8a032;"></div>
-							<!-- Pagination -->
-							<div class="swiper-pagination"></div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			
-			<div class="project-details__content">
-				<div class="row">
-					<div class="col-xl-8 col-lg-8">
-						<div class="project-details__content-left">
-							<div class="d-flex flex-wrap align-items-center justify-content-between mb-4" style="gap: 15px;">
-								<div class="h3 mb-0" style="font-weight: 800; background: linear-gradient(90deg, #0D3B66, #c8a032); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 2px 10px rgba(200, 160, 50, 0.1);">Gaur Chrysalis – Premium Plots near Galgotias University</div>
-								<a href="fcolonybrochure.jpeg" target="_blank" class="download-brochure-btn" style="background-color: #0D3B66; color: #ffffff; padding: 8px 20px; border-radius: 30px; font-weight: 600; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 5px 15px rgba(13, 59, 102, 0.2); transition: all 0.3s ease;">
-									<i class="fa fa-download"></i> Brochure
-								</a>
-								<style>
-									.download-brochure-btn:hover { background-color: #c8a032 !important; color: #ffffff !important; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(200, 160, 50, 0.4) !important; }
-								</style>
-							</div>
-							<p>Gaur Chrysalis by Gaurs Group is a premium plotted development located in Sector 22D, Yamuna Expressway. Enjoying a strategic location near Galgotias University, this project offers an investment-friendly environment with wide internal roads, planned layout, and a green environment.</p>
-							<p class="mb-5">With a pre-launch offer of up to ₹1 Lakh discount, plots are available at just ₹28,000 per sq. yard. Secure your freehold plot with a low booking amount of ₹11,000 and capitalize on the rapid infrastructure development in the Yamuna Authority region.</p>
-							
-							<h4 class="mb-4" style="color: #0D3B66; font-weight: 700;">Why Invest in Gaur Chrysalis?</h4>
-							
-<div class="row mb-5">
-    <div class="col-md-6 mb-3">
-        <div class="modern-feature-card" style="background: #fff; padding: 25px; border-radius: 15px; height: 100%; border-left: 4px solid #c8a032; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative; overflow: hidden;">
-            <h5 style="color: #0D3B66; font-size: 18px; font-weight: 700;">Strategic Location</h5>
-            <p class="mb-0" style="font-size: 14px; color: #555;">Situated near Galgotias University and major development zones of Greater Noida.</p>
+    <!-- Hero Section -->
+    <section class="gc-hero">
+        <div class="gc-hero-bg"></div>
+        <div class="gc-hero-content">
+            <span class="gc-hero-subtitle">Premium Residential Project</span>
+            <h1 class="gc-hero-title">Gaur Chrysalis <span class="text-gold">2.0</span></h1>
+            <p class="gc-hero-tagline">Every Great Beauty Is Born From Becoming.</p>
+            <p style="opacity: 0; animation: fadeUp 1s 1.1s forwards;">
+                <strong>RERA NO.: UPRERAPRJ622344/11/2025</strong><br>
+                Sector 22D, Yamuna Expressway, Greater Noida
+            </p>
+            <br>
+            <a href="#overview" class="gc-btn" style="opacity: 0; animation: fadeUp 1s 1.3s forwards;">Discover Luxury</a>
         </div>
-    </div>
-    <div class="col-md-6 mb-3">
-        <div class="modern-feature-card" style="background: #fff; padding: 25px; border-radius: 15px; height: 100%; border-left: 4px solid #c8a032; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative; overflow: hidden;">
-            <h5 style="color: #0D3B66; font-size: 18px; font-weight: 700;">Affordable Investment</h5>
-            <p class="mb-0" style="font-size: 14px; color: #555;">Competitive pricing with plots at ₹28,000/Sq. Yd. and special pre-launch offers.</p>
-        </div>
-    </div>
-    <div class="col-md-6 mb-3">
-        <div class="modern-feature-card" style="background: #fff; padding: 25px; border-radius: 15px; height: 100%; border-left: 4px solid #c8a032; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative; overflow: hidden;">
-            <h5 style="color: #0D3B66; font-size: 18px; font-weight: 700;">High Appreciation</h5>
-            <p class="mb-0" style="font-size: 14px; color: #555;">Rapid infrastructure development in Dankaur supports future value growth.</p>
-        </div>
-    </div>
-    <div class="col-md-6 mb-3">
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; height: 100%; border-left: 4px solid #c8a032; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-            <h5 style="color: #0D3B66; font-size: 18px; font-weight: 700;">Easy Entry</h5>
-            <p class="mb-0" style="font-size: 14px; color: #555;">Plots can be booked with a low booking amount of ₹11,000, ideal for first-time investors.</p>
-        </div>
-    </div>
-</div>
-
-				</div>
-					</div>
-					<div class="col-xl-4 col-lg-4">
-						<div class="project-details__content-right" style="margin-top: 31px; z-index: 99;">
-							<div class="project-details__details-box modern-sidebar-card" style="background: linear-gradient(135deg, rgba(13, 59, 102, 0.95) 0%, rgba(8, 37, 68, 0.98) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 40px 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
-							<style>
-								.modern-sidebar-card { animation: floatingCard 6s ease-in-out infinite; }
-								@keyframes floatingCard { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
-							</style>
-								<div class="project-details__bg-shape"> </div>
-								<h4 style="color: #fff; margin-bottom: 25px; font-size: 24px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">Project Overview</h4>
-								<button class="glowing-video-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
-									<i class="fa fa-play-circle"></i> View Video Tour
-								</button>
-								<a href="fcolonysitemap.pdf" target="_blank" class="glowing-sitemap-btn" style="text-decoration: none;">
-									<i class="fa fa-map"></i> View Sitemap
-								</a>
-								<a href="https://www.google.com/maps?q=28.3715426,77.6039683&z=17&hl=en" target="_blank" class="glowing-location-btn" style="text-decoration: none;">
-									<i class="fa fa-map-marker-alt"></i> View Site Location
-								</a>
-								<style>
-								.glowing-video-btn, .glowing-sitemap-btn, .glowing-location-btn {
-									display: flex; align-items: center; justify-content: center; width: 100%;
-									padding: 15px 20px; margin-bottom: 15px;
-									background-size: 200% auto;
-									color: #fff; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-									border: none; border-radius: 10px; cursor: pointer;
-									transition: transform 0.3s ease;
-								}
-								.glowing-location-btn { margin-bottom: 25px; } /* Last button gets more bottom margin */
-								.glowing-video-btn:hover, .glowing-sitemap-btn:hover, .glowing-location-btn:hover { transform: scale(1.03); color: #fff; }
-								.glowing-video-btn i, .glowing-sitemap-btn i, .glowing-location-btn i { font-size: 22px; margin-right: 10px; }
-								
-								/* Video Tour (Gold) */
-								.glowing-video-btn {
-									background-image: linear-gradient(90deg, #c8a032, #f3c951, #c8a032);
-									animation: glowGradientVideo 3s infinite linear, glowPulseVideo 2s infinite alternate;
-									box-shadow: 0 0 15px rgba(200, 160, 50, 0.6);
-								}
-								@keyframes glowGradientVideo { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-								@keyframes glowPulseVideo { 0% { box-shadow: 0 0 10px rgba(200, 160, 50, 0.4); } 100% { box-shadow: 0 0 25px rgba(200, 160, 50, 0.8); } }
-
-								/* Sitemap (Emerald Green) */
-								.glowing-sitemap-btn {
-									background-image: linear-gradient(90deg, #10b981, #34d399, #10b981);
-									animation: glowGradientSitemap 3s infinite linear, glowPulseSitemap 2s infinite alternate;
-									box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
-								}
-								@keyframes glowGradientSitemap { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-								@keyframes glowPulseSitemap { 0% { box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); } 100% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.8); } }
-
-								/* Location (Crimson Red) */
-								.glowing-location-btn {
-									background-image: linear-gradient(90deg, #e11d48, #fb7185, #e11d48);
-									animation: glowGradientLocation 3s infinite linear, glowPulseLocation 2s infinite alternate;
-									box-shadow: 0 0 15px rgba(225, 29, 72, 0.6);
-								}
-								@keyframes glowGradientLocation { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
-								@keyframes glowPulseLocation { 0% { box-shadow: 0 0 10px rgba(225, 29, 72, 0.4); } 100% { box-shadow: 0 0 25px rgba(225, 29, 72, 0.8); } }
-								</style>
-								<ul class="list-unstyled project-details__details-list">
-									<li style="margin-bottom: 20px;">
-										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Developer</p>
-										<div class="h5 project-details__name" style="color: #fff; font-size: 18px; font-weight: 600;">Gaurs Group</div>
-									</li>
-									<li style="margin-bottom: 20px;">
-										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Location</p>
-										<div class="h5 project-details__name" style="color: #fff; font-size: 18px; font-weight: 600;">Sector 22D, Yamuna Expressway</div>
-									</li>
-									<li style="margin-bottom: 20px;">
-										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Property Type</p>
-										<div class="h5 project-details__name" style="color: #fff; font-size: 18px; font-weight: 600;">Premium Flats & Apartments</div>
-									</li>
-									<li style="margin-bottom: 20px;">
-										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Plot Price</p>
-										<div class="h5 project-details__name" style="color: #fff; font-size: 18px; font-weight: 600;">₹28,000 Per Sq. Yard</div>
-									</li>
-									<li style="margin-bottom: 20px;">
-										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Booking Amount</p>
-										<div class="h5 project-details__name" style="color: #c8a032; font-size: 22px; font-weight: 800; text-shadow: 0 0 10px rgba(200,160,50,0.3);">10% of BSP</div>
-									</li>
-									<li>
-										<p class="project-details__client" style="color: rgba(255,255,255,0.7); margin-bottom: 5px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Booking Status</p>
-										<div class="h5 project-details__name" style="color: #28a745; font-size: 18px; font-weight: 600; text-shadow: 0 0 10px rgba(40,167,69,0.3);">Open Now</div>
-									</li>
-								</ul>
-								
-							</div>
-						</div>
-					</div>
-
-			</div>
-			
-			<!-- Inquiry Bar -->
-			<div class="project-inquiry-bar wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 50px; background: linear-gradient(135deg, #0D3B66 0%, #082544 100%); border-radius: 20px; padding: 25px 30px; margin-bottom: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); clear: both;">
-				<div class="row align-items-center">
-					<div class="col-xl-7 col-lg-12 mb-4 mb-xl-0">
-						<div class="inquiry-form d-flex flex-wrap align-items-center" style="gap: 15px;">
-							<h4 style="color: #fff; margin-bottom: 0; margin-right: 5px; font-size: 20px;">Interested? Let's Talk</h4>
-							<input type="text" name="name" placeholder="Your Name" style="padding: 12px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); outline: none; flex: 1; min-width: 130px; background: rgba(255,255,255,0.05); color: #fff;">
-							<input type="tel" name="phone" placeholder="Phone Number" style="padding: 12px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.2); outline: none; flex: 1; min-width: 130px; background: rgba(255,255,255,0.05); color: #fff;">
-							<button type="submit" style="background-color: #c8a032; color: #ffffff; padding: 12px 30px; border-radius: 30px; border: none; font-weight: 600; font-size: 15px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(200,160,50,0.3);">Submit</button>
-						</div>
-					</div>
-					<div class="col-xl-5 col-lg-12">
-						<div class="inquiry-actions d-flex align-items-center justify-content-xl-end justify-content-start" style="gap: 15px;">
-							<a href="tel:+918368337869" class="action-btn call-btn d-flex align-items-center justify-content-center" style="flex: 1; padding: 12px 20px; border-radius: 30px; background: #ffffff; color: #0D3B66; font-size: 16px; font-weight: 600; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; gap: 10px;" title="Call Us">
-								<i class="fa-solid fa-phone"></i> Call Us
-							</a>
-							<a href="https://wa.me/918368337869" target="_blank" class="action-btn wa-btn d-flex align-items-center justify-content-center" style="flex: 1; padding: 12px 20px; border-radius: 30px; background: #25D366; color: #ffffff; font-size: 16px; font-weight: 600; text-decoration: none; box-shadow: 0 5px 15px rgba(37,211,102,0.3); transition: all 0.3s ease; gap: 10px;" title="WhatsApp Us">
-								<i class="fab fa-whatsapp" style="font-size: 20px;"></i> WhatsApp
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<style>
-			.project-inquiry-bar input::placeholder {
-				color: rgba(255,255,255,0.6);
-			}
-			.project-inquiry-bar input:focus {
-				border-color: #c8a032 !important;
-				background: rgba(255,255,255,0.1) !important;
-			}
-			.action-btn:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 10px 25px rgba(0,0,0,0.3) !important;
-			}
-			@media(max-width: 1199px) {
-				.inquiry-actions {
-					margin-left: 0 !important;
-					width: 100%;
-					justify-content: flex-start;
-				}
-			}
-			</style>
-			<!-- End Inquiry Bar -->
-
-			
-		</div>
-	</section>
-	<!--Project Details End-->
-
-
-    <!-- Project Section -->
-    <section class="project-section-two">
-      <div class="auto-container">
-        <div class="sec-title text-center">
-           <div class="h6 sub-title">Our Projects</div>
-           <div class="h2 title">Showcasing Your Projects</div>
-        </div>
-        <div class="row gx-3">
-          <div class="col-md-4">
-            <div class="project-box1 wow fadeInUp" data-wow-delay=".1s">
-              <div class="inner-box">
-                <div class="thumb">
-                  <img src="images/resource/project1-1.jpg" alt="img">
-                  <img src="images/resource/project1-1.jpg" alt="img">
-                  <div class="tag">Cornerstone</div>
-                </div>
-                <div class="content">
-                  <div class="catogory-box"><a href="#">Tokyo, Japan</a></div>
-                   <div class="h4 title"><a href="page-project-details.html">Vista Residences at Councill Square</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="project-box1 wow fadeInUp" data-wow-delay=".2s">
-              <div class="inner-box">
-                <div class="thumb">
-                  <img src="images/resource/project1-2.jpg" alt="img">
-                  <img src="images/resource/project1-2.jpg" alt="img">
-                  <div class="tag">Foundation</div>
-                </div>
-                <div class="content">
-                  <div class="catogory-box"><a href="#">Miami, Florida</a></div>
-                   <div class="h4 title"><a href="page-project-details.html">Councill Square Panorama Residences</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="project-box1 wow fadeInUp" data-wow-delay=".3s">
-              <div class="inner-box">
-                <div class="thumb">
-                  <img src="images/resource/project1-3.jpg" alt="img">
-                  <img src="images/resource/project1-3.jpg" alt="img">
-                  <div class="tag">Pinnacle</div>
-                </div>
-                <div class="content">
-                  <div class="catogory-box"><a href="#">Paris, France</a></div>
-                   <div class="h4 title"><a href="page-project-details.html">The Grand Premium Apartments Dubai</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- End Project Section -->
 
-  <!-- Main Footer -->
-    <footer class="main-footer footer-style-one mt-0">
-      <div class="shape-1"><img src="images/resource/newmanind7.png" alt=""></div>
-      <!-- Widgets Section -->
-      <div class="widgets-section">
-        <div class="anim-icon"><img src="images/icons/footer-h1-2.png" alt=""></div>
-        <div class="auto-container">
-          <div class="row align-items-center">
-            <!-- Footer Column -->
-            <div class="footer-column col-lg-5">
-              <div class="footer-widget about-widget wow fadeInLeft">
-                <div class="footer-logo text-center" style="display: inline-block; text-align: center; margin-bottom: 20px;">
-                  <div style="font-size: 42px; font-weight: 800; line-height: 1; color: #ffffff; letter-spacing: 2px; font-family: 'Inter', sans-serif;">ED</div>
-                  <div style="font-size: 22px; font-weight: 700; color: #ffffff; letter-spacing: 3px; font-family: 'Inter', sans-serif; margin-top: 5px;">INFRATECH</div>
-                </div>
-              </div>
+    <!-- Overview Section -->
+    <section id="overview" class="gc-section">
+        <h2 class="section-title">An Ultra-Luxury Landmark</h2>
+        
+        <div class="gc-about-layout reveal">
+            <div class="gc-about-text">
+                <p>A new project of the Gaurs Group has been planned for a long time. We are pleased to introduce our upcoming residential project in Sector 22D, Yamuna Expressway, Greater Noida. Designed around an elegant butterfly-inspired theme, the project reflects the beauty of becoming—where thoughtful design, open spaces, and elevated aesthetics come together to create a distinctive lifestyle experience.</p>
+                <p>Gaur Chrysalis was designed with only four flats per floor, with 4 high-speed lifts to ensure premium comfort for its elite residents. The floor plans and layouts of these 3 & 4-bedroom flats are beautiful, providing excellent connectivity and strong investment potential near Jewar Airport, Film City, and the Formula 1 track.</p>
             </div>
-            <!-- footer column -->
-            <div class="footer-column col-lg-2">
+            <div class="gc-about-img">
+                <img src="images/gaur/images_building.png" alt="Gaur Chrysalis Architecture">
             </div>
-            <div class="footer-column style-two col-lg-5">
-              
-              <div class="footer-widget subscribe-widget wow fadeInLeft" data-wow-delay="200ms">
-                 <div class="h5 widget-title" style="margin-bottom: 15px; color: #fff;">About Gaurs Group</div>
-                 <p class="text" style="color: rgba(255, 255, 255, 0.7); line-height: 1.8; text-align: justify; font-size: 14px;">
-                    Gaurs Group is a premier real estate developer dedicated to transforming landscapes into thriving communities. We specialize in developing high-quality residential and commercial spaces that deliver exceptional value, quality, and trust to our clients.
-                 </p>
-              </div>
-
-            </div>
-          </div>
-          <hr class="mb-40">
-          <div class="row">
-            <!-- Footer Column -->
-            <div class="footer-column border-0 col-lg-5 col-md-4">
-              <div class="footer-widget about-widget wow fadeInLeft">
-                <div class="widget-content">
-                  <div class="contact-area">
-                    <div class="address" style="margin-bottom: 25px; font-size: 16px; line-height: 1.6;">
-                      <strong style="color: white;">Head Office :</strong> GAURAVDEEP HEIGHTS <br>
-                      B-23A, Sector-62, Near Fortis Hospital <br>
-                      (Sector-62, Noida Metro Station) Noida
-                    </div>
-
-                    <a class="phone" href="tel:+918368337869">+91 836 833 7869</a>
-                    <a class="mail" href="mailto:edinfratech6@gmail.com">edinfratech6@gmail.com</a>
-                  </div>
-                  <div class="social-widget mt-30">
-                    <ul class="social-icon-list1 mb-5 mb-lg-0">
-                      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- footer column -->
-            <div class="footer-column border-0 col-lg-2 col-md-1">
-            </div>
-            <div class="footer-column style-two border-0 col-lg-5 col-md-7">
-              <div class="row d-block d-md-flex">
-                <div class="footer-widget links-widget col wow fadeInLeft" data-wow-delay="400ms">
-                   <div class="h5 widget-title">Quick Link</div>
-                  <div class="widget-content mb-5 mb-sm-0">
-                    <ul class="user-links">
-                      <li><a href="page-team.html">Our Team</a></li>
-                      <li><a href="page-projects.html">Our Projects</a></li>
-                      <li><a href="page-contact.html">Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="footer-widget style-two links-widget col wow fadeInLeft" data-wow-delay="400ms">
-                   <div class="h5 widget-title">Our Works</div>
-                  <div class="widget-content">
-                    <ul class="user-links">
-                      <li><a href="page-gated-community.html">Gated Community Noida</a></li>
-                      <li><a href="page-construction-management.html">Construction Management</a></li>
-                      <li><a href="page-investment-capital.html">Investment &amp; Capital</a></li>
-                      <li><a href="page-architecture-design.html">Architecture &amp; Design</a></li>
-                      <li><a href="page-projects-management.html">Projects Management</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-bottom">
-            <div class="inner-container justify-content-center justify-content-sm-between">
-              <p class="copyright-text">&copy; Copyright Reserved by <a href="https://amanmishra.work" style="color: inherit; text-decoration: underline;">Aman Mishra</a></p>
-              <ul class="d-flex align-items-center gap-3">
-                <li><a href="page-privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="page-terms-of-service.html">Term of Service</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <div class="gc-overview-grid reveal">
+            <div class="gc-glass-card">
+                <i class="fa-solid fa-expand" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                <h3>12 Acres</h3>
+                <p>Project Spread (4.77 Hectares)</p>
+            </div>
+            <div class="gc-glass-card">
+                <i class="fa-solid fa-building" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                <h3>7 Towers</h3>
+                <p>G+33 Floors Iconic High-Rises</p>
+            </div>
+            <div class="gc-glass-card">
+                <i class="fa-solid fa-bed" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                <h3>952 Units</h3>
+                <p>Premium 3 & 4 BHK Apartments</p>
+            </div>
+            <div class="gc-glass-card">
+                <i class="fa-solid fa-crown" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 1rem;"></i>
+                <h3>75,000 sq.ft</h3>
+                <p>Largest Clubhouse on Yamuna Exp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubhouse Section -->
+    <section id="clubhouse" class="gc-section" style="background-color: #050505;">
+        <h2 class="section-title">The Biggest Clubhouse</h2>
+        <div class="gc-about-layout flex-row-reverse reveal">
+            <div class="gc-about-text">
+                <p><strong>6867 sq.mt. (75000 sq.ft.)</strong> Modern Clubhouse spread over five levels. A Triple height lobby adorned with statement art. A signature Art Gallery.</p>
+                <p>It features a 25,000 sq.ft. open rooftop clubhouse, 2 premium swimming pools (including an Olympic-size and a half-Olympic pool), state-of-the-art gym, banquet halls, and sky views. A fusion of Sports, Wellness, Fun, Zen, and Entertainment.</p>
+            </div>
+            <div class="gc-about-img">
+                <img src="images/gaur/images_clubhouse2.jpg" alt="The Clubhouse">
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Showcase -->
+    <section id="amenities" class="gc-section">
+        <h2 class="section-title">The Beauty of Becoming</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 2rem;" class="reveal">Crafted By Nature. Elevated By Design. Discover infinite worlds within Gaur Chrysalis.</p>
+        
+        <div class="gc-amenities-grid reveal">
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_13.jpg" alt="Amphitheater">
+                <div class="gc-amenity-overlay">
+                    <h4>Amphitheater</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_club_18.jpg" alt="State-of-the-art Gym">
+                <div class="gc-amenity-overlay">
+                    <h4>State-of-the-art Gym</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_club_16.jpg" alt="Banquet Hall">
+                <div class="gc-amenity-overlay">
+                    <h4>Banquet Hall</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_club_1.jpg" alt="Swimming Pool">
+                <div class="gc-amenity-overlay">
+                    <h4>Heated Indoor Pool</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_Kids-Pool.jpg" alt="Kids Play Area">
+                <div class="gc-amenity-overlay">
+                    <h4>Kids Pool</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_jacuzzi.jpg" alt="Jacuzzi">
+                <div class="gc-amenity-overlay">
+                    <h4>Jacuzzi</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_club_4.jpg" alt="Badminton Court">
+                <div class="gc-amenity-overlay">
+                    <h4>Badminton Court</h4>
+                </div>
+            </div>
+            <div class="gc-amenity-item">
+                <img src="images/gaur/images_amenities_4.jpg" alt="Butterfly Garden">
+                <div class="gc-amenity-overlay">
+                    <h4>Butterfly Garden</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="gc-section" style="background-color: #050505;">
+        <h2 class="section-title">Prime Connectivity</h2>
+        <div class="gc-about-layout reveal">
+            <div class="gc-about-text">
+                <p>Located adjacent to the upcoming Noida International Airport, Business Hubs, Entertainment Zones, and India's next tech hub.</p>
+                <ul style="list-style: none; margin-top: 2rem;">
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                        <i class="fa-solid fa-plane" style="color: var(--color-gold); font-size: 1.5rem; width: 30px;"></i>
+                        <div><strong style="color:var(--color-gold);">10-12 Kms</strong><br>Upcoming Jewar International Airport</div>
+                    </li>
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                        <i class="fa-solid fa-road" style="color: var(--color-gold); font-size: 1.5rem; width: 30px;"></i>
+                        <div><strong style="color:var(--color-gold);">10 Kms</strong><br>Eastern Peripheral Expressway</div>
+                    </li>
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                        <i class="fa-solid fa-car" style="color: var(--color-gold); font-size: 1.5rem; width: 30px;"></i>
+                        <div><strong style="color:var(--color-gold);">18 Kms</strong><br>Noida-Greater Noida Expressway</div>
+                    </li>
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                        <i class="fa-solid fa-film" style="color: var(--color-gold); font-size: 1.5rem; width: 30px;"></i>
+                        <div><strong style="color:var(--color-gold);">Close Proximity</strong><br>Olympic City and Film City</div>
+                    </li>
+                    <li style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                        <i class="fa-solid fa-school" style="color: var(--color-gold); font-size: 1.5rem; width: 30px;"></i>
+                        <div><strong style="color:var(--color-gold);">3 Kms</strong><br>Gaurs International School & Upcoming Mall</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gc-about-img">
+                <img src="images/gaur/images_location-map-big.jpg" alt="Location Map">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="gc-footer">
+        <h2>ED Infratech</h2>
+        <p>Premium Real Estate Offerings</p>
+        <div style="margin-top: 2rem;">
+            <a href="index.html" class="gc-btn">Back to Main Site</a>
+        </div>
+        <p style="margin-top: 3rem; font-size: 0.9rem; color: #555;">&copy; 2026 ED Infratech. All Rights Reserved. RERA NO.: UPRERAPRJ622344/11/2025</p>
     </footer>
-    <!--End Main Footer -->
 
-
-  </div>
-
-<!-- Video Modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" style="z-index: 999999;">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content" style="background: transparent; border: none;">
-      <div class="modal-header" style="border-bottom: none; padding-bottom: 10px;">
-        <h5 class="modal-title" id="videoModalLabel" style="color: #fff; font-size: 24px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Gaur Chrysalis</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);"></button>
-      </div>
-      <div class="modal-body" style="padding: 0 10px 10px 10px;">
-        <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); background: #000; display: flex; justify-content: center;">
-            <video id="fcolonyVideoPlayer" style="width: 100%; max-height: 70vh; object-fit: contain;" controls>
-                <source src="fcolonysitetour.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var videoModal = document.getElementById('videoModal');
-        var fcolonyVideoPlayer = document.getElementById('fcolonyVideoPlayer');
-        if(videoModal && fcolonyVideoPlayer) {
-            videoModal.addEventListener('hidden.bs.modal', function () {
-                fcolonyVideoPlayer.pause();
-            });
-            videoModal.addEventListener('shown.bs.modal', function () {
-                fcolonyVideoPlayer.play();
-            });
-        }
-    });
-</script>
-
-<!-- End Page Wrapper -->
-
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/select2.min.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/bxslider.js"></script>
-<script src="js/knob.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/gsap.min.js"></script>
-<script src="js/ScrollTrigger.min.js"></script>
-<script src="js/splitType.js"></script>
-<script src="js/gsap-scroll-smoother.js"></script>
-<script src="js/gsap-scroll-to-plugin.js"></script>
-<script src="js/SplitText.min.js"></script>
-<script src="js/mixitup.js"></script>
-<script src="js/custom-gsap.js"></script>
-<script src="js/script.js"></script>
-<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;88f4fa328f314d4c95a104b4a60b2313&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
-
-
-
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    if(typeof Swiper !== 'undefined') {
-        new Swiper('.project-details-hero-slider', {
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.project-details-hero-slider .swiper-button-next',
-                prevEl: '.project-details-hero-slider .swiper-button-prev',
-            },
-            pagination: {
-                el: '.project-details-hero-slider .swiper-pagination',
-                clickable: true,
-            },
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            }
-        });
-    }
-});
-</script>
-</body><!-- Mirrored from html.kodesolution.com/2026/EDFratech-html/page-project-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jun 2026 10:30:45 GMT --></html>
+    <!-- Independent JS strictly for this page -->
+    <script src="js/gaur-chrysalis.js"></script>
+</body>
+</html>
