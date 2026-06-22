@@ -4547,7 +4547,7 @@ Main Header
   font-size: 16px;
 }
 .sticky-header .header-phone_box .info {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--theme-color-black);
   display: -webkit-box;
@@ -4557,11 +4557,13 @@ Main Header
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin-bottom: 3px;
 }
 .sticky-header .header-phone_box .info strong {
-  color: rgb(151, 151, 151);
-  font-weight: 400;
+  color: #000000;
+  font-weight: 600;
   font-size: 16px;
   font-family: var(--heading-font-family);
   -webkit-transition: all 300ms ease;
