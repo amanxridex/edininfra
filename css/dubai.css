@@ -1,14 +1,14 @@
-/* dubai.css - Ultra Premium Styles for Dubai Properties */
+/* dubai.css - Ultra Premium Styles for Dubai Properties (v2.0) */
 
 /* Reset & Variables */
 :root {
-    --gold: #c8a032;
-    --gold-light: #e6c875;
-    --dark-bg: #0a0a0a;
-    --dark-card: #151515;
-    --text-main: #ffffff;
-    --text-muted: #a0a0a0;
-    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --gold: #d4af37;
+    --gold-light: #f3e5ab;
+    --dark-bg: #050505;
+    --dark-card: #111111;
+    --text-main: #fcfcfc;
+    --text-muted: #888888;
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dubai-experience {
@@ -20,6 +20,51 @@
 
 .text-gold { color: var(--gold) !important; }
 .text-white { color: var(--text-main) !important; }
+
+/* Preloader */
+.dubai-preloader {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: var(--dark-bg);
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out;
+}
+
+.dubai-loader-text {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.dubai-loader-bar {
+    width: 200px; height: 2px;
+    background: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.dubai-loader-progress {
+    position: absolute;
+    top: 0; left: 0; height: 100%; width: 0%;
+    background: var(--gold);
+}
+
+/* Typography Utilities */
+.colossal-text {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.tracking-wide { letter-spacing: 4px; }
+.uppercase { text-transform: uppercase; }
 
 /* -------------------- HERO SECTION -------------------- */
 .dubai-hero {
@@ -38,44 +83,42 @@
     z-index: 0;
 }
 
-.dubai-video-bg img {
-    width: 100%;
-    height: 100%;
+.dubai-video-bg video {
+    width: 100%; height: 100%;
     object-fit: cover;
-    transform: scale(1.1);
-    animation: slowPan 30s ease-in-out infinite alternate;
+    transform: scale(1.05); /* Slight scale to hide edges during parallax */
 }
 
 .dubai-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(10,10,10,1) 100%);
+    background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,1) 100%);
     z-index: 1;
 }
 
 .dubai-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     padding: 0 20px;
 }
 
-/* Glitch Effect for DUBAI text */
+/* Glitch Effect */
 .glitch {
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     margin-bottom: 20px;
     position: relative;
-    color: white;
-    text-shadow: 0 0 30px rgba(200, 160, 50, 0.5);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--gold-light);
-    letter-spacing: 4px;
+    color: var(--gold);
+    letter-spacing: 6px;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 60px;
@@ -90,216 +133,278 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    animation: bounce 2s infinite;
+    gap: 15px;
     cursor: pointer;
-    color: var(--gold);
+    color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    transition: color 0.3s;
+}
+
+.scroll-indicator:hover { color: var(--gold); }
+
+.scroll-indicator i {
+    animation: dropArrow 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+    color: var(--gold);
+    font-size: 20px;
+}
+
+@keyframes dropArrow {
+    0%, 100% { transform: translateY(0); opacity: 0; }
+    50% { transform: translateY(15px); opacity: 1; }
 }
 
 /* -------------------- DEVELOPERS SECTION -------------------- */
 .dubai-developers {
-    padding: 100px 0;
+    padding: 150px 0;
     position: relative;
     z-index: 2;
     background: var(--dark-bg);
 }
 
-.dev-card {
-    position: relative;
-    height: 500px;
-    border-radius: 15px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.05);
+.luxury-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin-top: 50px;
 }
 
-.dev-bg {
+.luxury-item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.luxury-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.luxury-img-wrapper {
+    flex: 1.2;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Add a pseudo element to serve as an overlay reveal */
+.luxury-img-wrapper::after {
+    content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    transition: var(--transition);
+    background: var(--dark-bg);
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dev-bg img {
-    width: 100%; height: 100%;
+.luxury-img-wrapper.is-revealed::after {
+    transform: scaleX(0);
+}
+
+.parallax-img {
+    width: 100%; height: 120%;
     object-fit: cover;
-    transition: var(--transition);
-    filter: brightness(0.6) grayscale(30%);
+    transform: translateY(-10%); /* Starting pos for parallax */
+    filter: brightness(0.8) contrast(1.1);
 }
 
-.dev-card:hover .dev-bg img {
-    transform: scale(1.08);
-    filter: brightness(0.9) grayscale(0%);
+.luxury-content {
+    flex: 1;
+    padding: 40px;
 }
 
-.dev-info {
-    position: absolute;
-    bottom: 0; left: 0; width: 100%;
-    padding: 40px 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-    transform: translateY(60px);
-    transition: var(--transition);
+.dev-brand {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
 }
 
-.dev-card:hover .dev-info {
-    transform: translateY(0);
+.dev-headline {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 30px;
 }
 
-.dev-logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
-
-.dev-info h3 {
-    font-size: 1.8rem;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.dev-info p {
+.dev-desc {
+    font-size: 1.1rem;
     color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-    opacity: 0;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.btn-luxury {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
     transition: var(--transition);
-    transition-delay: 0.1s;
+    position: relative;
+    overflow: hidden;
 }
 
-.dev-card:hover .dev-info p {
-    opacity: 1;
+.btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
 }
 
-.dev-info .theme-btn {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: var(--transition);
-    transition-delay: 0.2s;
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+.btn-luxury:hover {
+    color: var(--dark-bg);
+    border-color: var(--gold);
 }
 
-.dev-info .theme-btn:hover {
+.btn-luxury:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-luxury.gold-solid {
     background: var(--gold);
     color: var(--dark-bg);
+    border-color: var(--gold);
 }
 
-.dev-card:hover .theme-btn {
-    opacity: 1;
-    transform: translateY(0);
+.btn-luxury.gold-solid::before {
+    background: var(--text-main);
+}
+.btn-luxury.gold-solid:hover {
+    color: var(--dark-bg);
 }
 
 /* -------------------- PROPERTIES SECTION -------------------- */
 .dubai-properties {
-    padding: 80px 0 120px;
+    padding: 80px 0 150px;
     background: var(--dark-bg);
     position: relative;
     z-index: 2;
 }
 
-.prop-slide {
-    background: var(--dark-card);
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: var(--transition);
+.property-editorial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
 }
 
-.prop-slide:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-    border-color: rgba(200,160,50,0.3);
-}
-
-.prop-img {
+.editorial-card {
     position: relative;
-    height: 250px;
-    overflow: hidden;
+    group: hover;
 }
 
-.prop-img img {
+.ed-img-box {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.ed-img {
     width: 100%; height: 100%;
     object-fit: cover;
-    transition: var(--transition);
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(0.7);
 }
 
-.prop-slide:hover .prop-img img {
-    transform: scale(1.1);
+.editorial-card:hover .ed-img {
+    transform: scale(1.05);
+    filter: brightness(1);
 }
 
-.prop-price {
+.ed-price {
     position: absolute;
-    bottom: 20px; right: 20px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-    color: var(--gold);
-    padding: 8px 15px;
-    border-radius: 30px;
+    top: 20px; right: -10px;
+    background: var(--gold);
+    color: var(--dark-bg);
+    padding: 10px 20px;
     font-weight: 600;
     font-size: 0.9rem;
-    border: 1px solid rgba(200,160,50,0.3);
+    letter-spacing: 1px;
 }
 
-.prop-details {
-    padding: 30px;
-}
-
-.prop-details h4 {
-    font-size: 1.4rem;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.prop-details .location {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-
-.prop-details .location i {
-    color: var(--gold);
-    margin-right: 5px;
-}
-
-.amenities {
+.ed-meta {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.amenities span {
+.ed-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.ed-excerpt {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.ed-link {
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    transition: color 0.3s;
 }
 
-.amenities i {
+.ed-link i {
+    transition: transform 0.3s;
     color: var(--gold);
 }
 
-/* Animations */
-@keyframes slowPan {
-    0% { transform: scale(1.1) translate(0, 0); }
-    100% { transform: scale(1.15) translate(-2%, -2%); }
+.editorial-card:hover .ed-link { color: var(--gold); }
+.editorial-card:hover .ed-link i { transform: translateX(10px); }
+
+/* -------------------- CTA SECTION -------------------- */
+.dubai-cta {
+    position: relative;
+    padding: 150px 0;
+    overflow: hidden;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
-    40% { transform: translateY(-20px) translateX(-50%); }
-    60% { transform: translateY(-10px) translateX(-50%); }
+.dubai-cta-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
 }
 
-@media (max-width: 768px) {
-    .glitch { font-size: 4rem; letter-spacing: 10px; }
-    .subtitle { font-size: 1rem; letter-spacing: 2px; }
-    .dev-card { height: 400px; }
+.dubai-cta-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(5,5,5,1) 0%, rgba(5,5,5,0.6) 100%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .luxury-item, .luxury-item.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .luxury-img-wrapper { height: 400px; width: 100%; }
+    .colossal-text { font-size: 2.5rem; }
+    .glitch { font-size: 6rem; letter-spacing: 8px; }
+    .property-editorial { grid-template-columns: 1fr; gap: 60px; }
+    .ed-img-box { height: 350px; }
 }
