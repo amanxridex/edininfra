@@ -155,213 +155,343 @@
     50% { transform: translateY(15px); opacity: 1; }
 }
 
-/* -------------------- DEVELOPERS SECTION -------------------- */
+/* -------------------- NEW SEXY DEVELOPERS SECTION -------------------- */
 .dubai-developers {
-    padding: 150px 0;
+    padding: 180px 0;
+    background: var(--dark-bg);
     position: relative;
     z-index: 2;
-    background: var(--dark-bg);
 }
 
-.luxury-grid {
+.sexy-glow {
+    text-shadow: 0 0 15px rgba(212,175,55,0.4);
+}
+
+.sexy-grid {
     display: flex;
     flex-direction: column;
-    gap: 150px;
-    margin-top: 50px;
+    gap: 200px;
+    margin-top: 80px;
 }
 
-.luxury-item {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.luxury-item.reverse {
-    flex-direction: row-reverse;
-}
-
-.luxury-img-wrapper {
-    flex: 1.2;
-    height: 700px;
-    overflow: hidden;
+.sexy-dev-item {
     position: relative;
+    width: 100%;
+    height: 600px;
 }
 
-/* .luxury-img-wrapper::after removed to prevent black images */
+.sexy-img-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
 
-/* is-revealed class no longer needed */
+.sexy-dev-item.right-aligned .sexy-img-canvas {
+    left: auto;
+    right: 0;
+}
 
-.parallax-img {
-    width: 100%; height: 120%;
+.sexy-img-canvas .parallax-img {
+    width: 100%;
+    height: 120%;
     object-fit: cover;
-    transform: translateY(-10%); /* Starting pos for parallax */
-    filter: brightness(0.8) contrast(1.1);
+    filter: brightness(0.7) contrast(1.1) saturate(0.8);
+    transition: filter 0.8s ease, transform 1s ease;
 }
 
-.luxury-content {
-    flex: 1;
-    padding: 40px;
+.sexy-dev-item:hover .parallax-img {
+    filter: brightness(0.9) contrast(1.1) saturate(1.1);
+    transform: translateY(-10%) scale(1.03);
 }
 
+.img-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(5,5,5,0.8) 0%, transparent 40%, transparent 60%, rgba(5,5,5,0.8) 100%);
+    pointer-events: none;
+}
+
+.sexy-glass-card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    background: rgba(15, 15, 15, 0.4);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 24px;
+    padding: 60px 50px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255,255,255,0.05);
+    z-index: 10;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sexy-glass-card:hover {
+    background: rgba(20, 20, 20, 0.6);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 175, 55, 0.1);
+    transform: translateY(-52%);
+}
+
+.sexy-glass-card.left-card {
+    right: 5%;
+}
+
+.sexy-glass-card.right-card {
+    left: 5%;
+}
+
+.card-accent-line {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 30px;
+    transition: width 0.4s ease;
+}
+
+.sexy-glass-card:hover .card-accent-line {
+    width: 80px;
+}
+
+/* Developer content within card */
 .dev-brand {
-    font-size: 1rem;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .dev-headline {
     font-size: 3.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 30px;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #fff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .dev-desc {
-    font-size: 1.1rem;
-    color: var(--text-muted);
+    font-size: 1.05rem;
+    color: #bbb;
     line-height: 1.8;
     margin-bottom: 40px;
-    max-width: 450px;
+    font-weight: 300;
 }
 
-.btn-luxury {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--text-main);
+.btn-sexy {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50px;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8rem;
-    transition: var(--transition);
-    position: relative;
+    font-weight: 500;
     overflow: hidden;
+    transition: border-color 0.4s;
+    cursor: pointer;
 }
 
-.btn-luxury::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: -1;
-}
-
-.btn-luxury:hover {
-    color: var(--dark-bg);
+.btn-sexy:hover {
     border-color: var(--gold);
 }
 
-.btn-luxury:hover::before {
+.btn-sexy .btn-text {
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s;
+}
+
+.btn-sexy:hover .btn-text {
+    color: var(--dark-bg);
+}
+
+.btn-fill {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--gold);
+    border-radius: 50px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+}
+
+.btn-sexy:hover .btn-fill {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-.btn-luxury.gold-solid {
-    background: var(--gold);
-    color: var(--dark-bg);
-    border-color: var(--gold);
-}
-
-.btn-luxury.gold-solid::before {
-    background: var(--text-main);
-}
-.btn-luxury.gold-solid:hover {
-    color: var(--dark-bg);
-}
-
-/* -------------------- PROPERTIES SECTION -------------------- */
+/* -------------------- NEW SEXY PROPERTIES SECTION -------------------- */
 .dubai-properties {
-    padding: 80px 0 150px;
+    padding: 100px 0 180px;
     background: var(--dark-bg);
     position: relative;
     z-index: 2;
 }
 
-.property-editorial {
+.property-sexy-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 60px;
+    gap: 30px;
+    margin-top: 80px;
 }
 
-.editorial-card {
+.sexy-prop-card {
     position: relative;
-    group: hover;
-}
-
-.ed-img-box {
-    position: relative;
-    height: 500px;
+    height: 650px;
+    border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 30px;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
 }
 
-.ed-img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: brightness(0.7);
+.sexy-prop-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 30px rgba(212,175,55,0.15);
 }
 
-.editorial-card:hover .ed-img {
-    transform: scale(1.05);
-    filter: brightness(1);
-}
-
-.ed-price {
+.sexy-prop-img {
     position: absolute;
-    top: 20px; right: -10px;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.6) brightness(0.7);
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;
+}
+
+.sexy-prop-card:hover .sexy-prop-img {
+    transform: scale(1.1);
+    filter: saturate(1.2) brightness(0.9);
+}
+
+.sexy-prop-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.4) 40%, transparent 100%);
+    transition: opacity 0.5s ease;
+}
+
+.sexy-prop-card:hover .sexy-prop-overlay {
+    background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.6) 60%, rgba(212,175,55,0.1) 100%);
+}
+
+.sexy-prop-content {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 40px 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.sexy-prop-price {
+    align-self: flex-start;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    backdrop-filter: blur(10px);
+    color: var(--gold);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sexy-prop-card:hover .sexy-prop-price {
     background: var(--gold);
     color: var(--dark-bg);
-    padding: 10px 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
 }
 
-.ed-meta {
+.sexy-prop-meta {
     display: flex;
-    justify-content: space-between;
-    color: var(--gold);
+    align-items: center;
+    gap: 15px;
+    color: #ccc;
     font-size: 0.85rem;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 300;
 }
 
-.ed-title {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 15px;
+.sexy-prop-meta i {
+    color: var(--gold);
+    margin-right: 5px;
 }
 
-.ed-excerpt {
-    color: var(--text-muted);
+.dot-sep {
+    color: rgba(255,255,255,0.3);
+}
+
+.sexy-prop-title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 0;
+    transition: transform 0.5s ease;
+}
+
+.sexy-prop-hover-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease, margin-top 0.6s ease;
+}
+
+.sexy-prop-card:hover .sexy-prop-hover-content {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.sexy-prop-excerpt {
+    color: #bbb;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 25px;
+    font-weight: 300;
 }
 
-.ed-link {
-    color: var(--text-main);
+.btn-sexy-outline {
+    display: inline-block;
+    padding: 10px 0;
+    color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.3s;
+    font-weight: 500;
+    position: relative;
 }
 
-.ed-link i {
-    transition: transform 0.3s;
-    color: var(--gold);
+.btn-sexy-outline::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
 }
 
-.editorial-card:hover .ed-link { color: var(--gold); }
-.editorial-card:hover .ed-link i { transform: translateX(10px); }
+.btn-sexy-outline:hover::after {
+    width: 100%;
+}
 
 /* -------------------- CTA SECTION -------------------- */
 .dubai-cta {
@@ -388,13 +518,24 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .luxury-item, .luxury-item.reverse {
-        flex-direction: column;
-        gap: 40px;
+    .sexy-glass-card {
+        width: 80%;
+        position: relative;
+        top: -100px;
+        transform: translateY(0);
+        margin: 0 auto;
+        right: auto !important;
+        left: auto !important;
     }
-    .luxury-img-wrapper { height: 400px; width: 100%; }
-    .colossal-text { font-size: 2.5rem; }
-    .glitch { font-size: 6rem; letter-spacing: 8px; }
-    .property-editorial { grid-template-columns: 1fr; gap: 60px; }
-    .ed-img-box { height: 350px; }
+    .sexy-img-canvas {
+        width: 100%;
+        height: 450px;
+        position: relative;
+    }
+    .sexy-dev-item {
+        height: auto;
+    }
+    .sexy-grid { gap: 100px; }
+    .property-sexy-grid { grid-template-columns: 1fr; }
+    .sexy-prop-card { height: 500px; }
 }
