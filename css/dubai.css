@@ -187,19 +187,9 @@
     position: relative;
 }
 
-/* Add a pseudo element to serve as an overlay reveal */
-.luxury-img-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--dark-bg);
-    transform-origin: left;
-    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
+/* .luxury-img-wrapper::after removed to prevent black images */
 
-.luxury-img-wrapper.is-revealed::after {
-    transform: scaleX(0);
-}
+/* is-revealed class no longer needed */
 
 .parallax-img {
     width: 100%; height: 120%;
