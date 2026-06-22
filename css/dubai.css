@@ -1,0 +1,305 @@
+/* dubai.css - Ultra Premium Styles for Dubai Properties */
+
+/* Reset & Variables */
+:root {
+    --gold: #c8a032;
+    --gold-light: #e6c875;
+    --dark-bg: #0a0a0a;
+    --dark-card: #151515;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dubai-experience {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.text-gold { color: var(--gold) !important; }
+.text-white { color: var(--text-main) !important; }
+
+/* -------------------- HERO SECTION -------------------- */
+.dubai-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.dubai-video-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.dubai-video-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    animation: slowPan 30s ease-in-out infinite alternate;
+}
+
+.dubai-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(10,10,10,1) 100%);
+    z-index: 1;
+}
+
+.dubai-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Glitch Effect for DUBAI text */
+.glitch {
+    font-size: 8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 30px rgba(200, 160, 50, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--gold-light);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+/* -------------------- DEVELOPERS SECTION -------------------- */
+.dubai-developers {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+    background: var(--dark-bg);
+}
+
+.dev-card {
+    position: relative;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.dev-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    transition: var(--transition);
+}
+
+.dev-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+    filter: brightness(0.6) grayscale(30%);
+}
+
+.dev-card:hover .dev-bg img {
+    transform: scale(1.08);
+    filter: brightness(0.9) grayscale(0%);
+}
+
+.dev-info {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 40px 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    transform: translateY(60px);
+    transition: var(--transition);
+}
+
+.dev-card:hover .dev-info {
+    transform: translateY(0);
+}
+
+.dev-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.dev-info h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.dev-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    opacity: 0;
+    transition: var(--transition);
+    transition-delay: 0.1s;
+}
+
+.dev-card:hover .dev-info p {
+    opacity: 1;
+}
+
+.dev-info .theme-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+    transition-delay: 0.2s;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.dev-info .theme-btn:hover {
+    background: var(--gold);
+    color: var(--dark-bg);
+}
+
+.dev-card:hover .theme-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------- PROPERTIES SECTION -------------------- */
+.dubai-properties {
+    padding: 80px 0 120px;
+    background: var(--dark-bg);
+    position: relative;
+    z-index: 2;
+}
+
+.prop-slide {
+    background: var(--dark-card);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+}
+
+.prop-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    border-color: rgba(200,160,50,0.3);
+}
+
+.prop-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.prop-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.prop-slide:hover .prop-img img {
+    transform: scale(1.1);
+}
+
+.prop-price {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    color: var(--gold);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(200,160,50,0.3);
+}
+
+.prop-details {
+    padding: 30px;
+}
+
+.prop-details h4 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.prop-details .location {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.prop-details .location i {
+    color: var(--gold);
+    margin-right: 5px;
+}
+
+.amenities {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+.amenities span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.amenities i {
+    color: var(--gold);
+}
+
+/* Animations */
+@keyframes slowPan {
+    0% { transform: scale(1.1) translate(0, 0); }
+    100% { transform: scale(1.15) translate(-2%, -2%); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-20px) translateX(-50%); }
+    60% { transform: translateY(-10px) translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .glitch { font-size: 4rem; letter-spacing: 10px; }
+    .subtitle { font-size: 1rem; letter-spacing: 2px; }
+    .dev-card { height: 400px; }
+}
