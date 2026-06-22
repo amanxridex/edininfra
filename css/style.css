@@ -19654,3 +19654,32 @@ html, body { overflow-x: hidden !important; width: 100%; }
     padding-top: 40px !important;
   }
 }
+
+/* Custom Alternating Colors for Service Block Three */
+.services-section-three .row > .column:nth-child(odd) .service-block-three .inner-block {
+  background-color: #0D3B66 !important; /* Dark Blue */
+}
+.services-section-three .row > .column:nth-child(odd) .service-block-three .inner-block .title a,
+.services-section-three .row > .column:nth-child(odd) .service-block-three .inner-block .title {
+  color: #ffffff !important;
+}
+.services-section-three .row > .column:nth-child(odd) .service-block-three .inner-block .icon {
+  color: #0D3B66 !important;
+}
+
+.services-section-three .row > .column:nth-child(even) .service-block-three .inner-block {
+  background-color: #E67E22 !important; /* Orange */
+}
+.services-section-three .row > .column:nth-child(even) .service-block-three .inner-block .title a,
+.services-section-three .row > .column:nth-child(even) .service-block-three .inner-block .title {
+  color: #ffffff !important;
+}
+.services-section-three .row > .column:nth-child(even) .service-block-three .inner-block .icon {
+  color: #E67E22 !important;
+}
+
+/* Ensure hover text/icon colors remain visible */
+.services-section-three .row > .column:hover .service-block-three .inner-block .icon {
+  background-color: var(--theme-color1) !important;
+  color: #ffffff !important;
+}
