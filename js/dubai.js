@@ -1,46 +1,25 @@
-// js/dubai.js - Ultra Premium Interactivity (v2.0)
+// js/dubai.js - Ultra Premium Interactivity (v3.0)
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Preloader Logic
-    const preloader = document.querySelector('.dubai-preloader');
-    const progressBar = document.querySelector('.dubai-loader-progress');
-    
-    // Simulate loading progress
-    let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.random() * 20;
-        if (progress > 100) progress = 100;
-        if(progressBar) progressBar.style.width = `${progress}%`;
-        
-        if (progress === 100) {
-            clearInterval(interval);
-            setTimeout(() => {
-                if(preloader) {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                        initAnimations();
-                    }, 1000);
-                }
-            }, 500);
-        }
-    }, 150);
+    // Init Animations after a short delay (simulating load)
+    setTimeout(() => {
+        initAnimations();
+    }, 500);
 
     function initAnimations() {
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
 
-            // SplitText Animation (using SplitType)
+            // SplitText Animation (using SplitType if available)
             if (typeof SplitType !== 'undefined') {
-                const colossalTexts = new SplitType('.colossal-text', { types: 'lines, words, chars' });
-                
                 gsap.utils.toArray('.colossal-text').forEach(text => {
-                    gsap.from(text.querySelectorAll('.char'), {
-                        y: 100,
+                    const split = new SplitType(text, { types: 'lines, words, chars' });
+                    gsap.from(split.chars, {
+                        y: 50,
                         opacity: 0,
-                        duration: 1.2,
-                        stagger: 0.05,
+                        duration: 1,
+                        stagger: 0.02,
                         ease: 'power4.out',
                         scrollTrigger: {
                             trigger: text,
@@ -50,16 +29,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // Image Reveal & Parallax
-            gsap.utils.toArray('.luxury-img-wrapper').forEach(wrapper => {
-                // Reveal mask
+            // Stats Counters Animation
+            gsap.utils.toArray('.counter').forEach(counter => {
+                const targetVal = parseFloat(counter.innerText);
+                const isFloat = counter.innerText.includes('.');
+                
                 ScrollTrigger.create({
-                    trigger: wrapper,
-                    start: 'top 75%',
-                    onEnter: () => wrapper.classList.add('is-revealed')
+                    trigger: counter,
+                    start: 'top 85%',
+                    once: true,
+                    onEnter: () => {
+                        gsap.fromTo(counter, 
+                            { innerHTML: 0 }, 
+                            { 
+                                innerHTML: targetVal, 
+                                duration: 2, 
+                                ease: 'power2.out',
+                                snap: { innerHTML: isFloat ? 0.1 : 1 },
+                                onUpdate: function() {
+                                    counter.innerHTML = isFloat ? Number(this.targets()[0].innerHTML).toFixed(1) : Math.round(this.targets()[0].innerHTML);
+                                }
+                            }
+                        );
+                    }
                 });
+            });
 
-                // Parallax inner image
+            // Parallax Images in Developer Strips
+            gsap.utils.toArray('.dev-strip-bg').forEach(wrapper => {
                 const img = wrapper.querySelector('.parallax-img');
                 if(img) {
                     gsap.to(img, {
@@ -75,13 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Text Content Fade Up
-            gsap.utils.toArray('.luxury-content').forEach(content => {
-                gsap.from(content.children, {
-                    y: 50,
+            // Fade Up for Developer Content
+            gsap.utils.toArray('.dev-strip-content').forEach(content => {
+                gsap.from(content, {
+                    y: 60,
                     opacity: 0,
-                    duration: 1,
-                    stagger: 0.15,
+                    duration: 1.2,
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: content,
@@ -90,16 +86,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Editorial Cards Staggered Reveal
-            gsap.from('.editorial-card', {
+            // Staggered Reveal for "Why Dubai?" Cards
+            gsap.from('.why-card', {
+                y: 80,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.15,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.why-dubai-grid',
+                    start: 'top 80%'
+                }
+            });
+
+            // Magazine Property Cards
+            gsap.from('.mag-prop-card', {
                 y: 100,
                 opacity: 0,
                 duration: 1.2,
                 stagger: 0.2,
                 ease: 'power3.out',
                 scrollTrigger: {
-                    trigger: '.property-editorial',
-                    start: 'top 75%',
+                    trigger: '.property-magazine-grid',
+                    start: 'top 75%'
+                }
+            });
+
+            // 5-Step Process Timeline Stagger
+            gsap.from('.process-step', {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: 'back.out(1.2)',
+                scrollTrigger: {
+                    trigger: '.process-timeline',
+                    start: 'top 80%'
                 }
             });
 
@@ -107,10 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollInd = document.querySelector('.scroll-indicator');
             if(scrollInd) {
                 scrollInd.addEventListener('click', () => {
-                    const devsSection = document.querySelector('.dubai-developers');
-                    if(devsSection) {
+                    const nextSection = document.querySelector('.dubai-stats') || document.querySelector('.dubai-developers');
+                    if(nextSection) {
                         window.scrollTo({
-                            top: devsSection.offsetTop,
+                            top: nextSection.offsetTop,
                             behavior: 'smooth'
                         });
                     }
