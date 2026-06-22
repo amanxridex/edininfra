@@ -2,10 +2,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Init Animations after a short delay (simulating load)
-    setTimeout(() => {
-        initAnimations();
-    }, 500);
+    // Init Animations after window loads completely to ensure heights are calculated correctly
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            initAnimations();
+            if (typeof ScrollTrigger !== 'undefined') {
+                ScrollTrigger.refresh();
+            }
+        }, 500);
+    });
 
     function initAnimations() {
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -73,57 +78,67 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Fade Up for Developer Content
-            gsap.utils.toArray('.dev-strip-content').forEach(content => {
-                gsap.from(content, {
-                    y: 60,
-                    opacity: 0,
+            gsap.fromTo('.dev-strip-content', 
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
                     duration: 1.2,
                     ease: 'power3.out',
                     scrollTrigger: {
-                        trigger: content,
-                        start: 'top 80%'
+                        trigger: '.dev-strips-wrapper',
+                        start: 'top 85%'
                     }
-                });
-            });
+                }
+            );
 
             // Staggered Reveal for "Why Dubai?" Cards
-            gsap.from('.why-card', {
-                y: 80,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.15,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: '.why-dubai-grid',
-                    start: 'top 80%'
+            gsap.fromTo('.why-card', 
+                { y: 80, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.15,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.why-dubai-grid',
+                        start: 'top 90%'
+                    }
                 }
-            });
+            );
 
             // Magazine Property Cards
-            gsap.from('.mag-prop-card', {
-                y: 100,
-                opacity: 0,
-                duration: 1.2,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: '.property-magazine-grid',
-                    start: 'top 75%'
+            gsap.fromTo('.mag-prop-card', 
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    stagger: 0.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.property-magazine-grid',
+                        start: 'top 90%'
+                    }
                 }
-            });
+            );
 
             // 5-Step Process Timeline Stagger
-            gsap.from('.process-step', {
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.2,
-                ease: 'back.out(1.2)',
-                scrollTrigger: {
-                    trigger: '.process-timeline',
-                    start: 'top 80%'
+            gsap.fromTo('.process-step', 
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: 'back.out(1.2)',
+                    scrollTrigger: {
+                        trigger: '.process-timeline',
+                        start: 'top 90%'
+                    }
                 }
-            });
+            );
 
             // Scroll indicator smooth scroll
             const scrollInd = document.querySelector('.scroll-indicator');
