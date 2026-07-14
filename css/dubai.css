@@ -4,10 +4,10 @@
 :root {
     --gold: #C9A84C;
     --gold-light: #e6cd7c;
-    --dark-bg: #0a0a0a;
-    --dark-card: #111111;
+    --dark-bg: #1c2025;
+    --dark-card: #2a2e35;
     --text-main: #fcfcfc;
-    --text-muted: #888888;
+    --text-muted: #999999;
     --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
